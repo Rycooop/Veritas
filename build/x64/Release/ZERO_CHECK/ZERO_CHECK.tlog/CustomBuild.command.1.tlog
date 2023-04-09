@@ -1,6 +1,6 @@
-^C:\USERS\RYAN\DESKTOP\VERITAS-MAIN\BUILD\CMAKEFILES\3A1DFB6ED6F9A1DFA57ED5EAE6B6F387\GENERATE.STAMP.RULE
+^C:\USERS\RYAN\DESKTOP\VERITAS\BUILD\CMAKEFILES\9DD2BB14ECD6ED86D4420B4C5BADC35E\GENERATE.STAMP.RULE
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Ryan/Desktop/Veritas-main -BC:/Users/Ryan/Desktop/Veritas-main/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Ryan/Desktop/Veritas-main/build/Veritas.sln
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Ryan/Desktop/Veritas -BC:/Users/Ryan/Desktop/Veritas/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Ryan/Desktop/Veritas/build/Veritas.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

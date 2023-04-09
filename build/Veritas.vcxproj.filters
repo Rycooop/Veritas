@@ -1,37 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\Ryan\Desktop\Veritas-main\src\VTCircle.cpp">
+    <ClCompile Include="C:\Users\Ryan\Desktop\Veritas\src\VTCircle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Ryan\Desktop\Veritas-main\src\VTLine.cpp">
+    <ClCompile Include="C:\Users\Ryan\Desktop\Veritas\src\VTLine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Ryan\Desktop\Veritas-main\src\VTObject.cpp">
+    <ClCompile Include="C:\Users\Ryan\Desktop\Veritas\src\VTObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Ryan\Desktop\Veritas-main\src\VTRect.cpp">
+    <ClCompile Include="C:\Users\Ryan\Desktop\Veritas\src\VTRect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Ryan\Desktop\Veritas-main\src\VTRenderer.cpp">
+    <ClCompile Include="C:\Users\Ryan\Desktop\Veritas\src\VTRenderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Ryan\Desktop\Veritas-main\src\VTRoundedRect.cpp">
+    <ClCompile Include="C:\Users\Ryan\Desktop\Veritas\src\VTRoundedRect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Ryan\Desktop\Veritas-main\src\VTText.cpp">
+    <ClCompile Include="C:\Users\Ryan\Desktop\Veritas\src\VTText.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Ryan\Desktop\Veritas-main\src\VTWindow.cpp">
+    <ClCompile Include="C:\Users\Ryan\Desktop\Veritas\src\VTWindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Ryan\Desktop\Veritas-main\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\Ryan\Desktop\Veritas\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{4841CA1E-49DD-302E-819F-D7114C5DFEE1}</UniqueIdentifier>
+      <UniqueIdentifier>{DEAD47E8-0CA9-3AD1-8A6F-D867A47E6FA5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

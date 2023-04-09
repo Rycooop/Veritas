@@ -26,8 +26,8 @@ events:
       Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
       Copyright (C) Microsoft Corporation. All rights reserved.
       
-      Build started 4/6/2023 9:08:43 PM.
-      Project "C:\\Users\\Ryan\\Desktop\\Veritas-main\\build\\CMakeFiles\\3.26.2\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      Build started 4/8/2023 5:19:22 PM.
+      Project "C:\\Users\\Ryan\\Desktop\\Veritas\\build\\CMakeFiles\\3.26.2\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
       PrepareForBuild:
         Creating directory "Debug\\".
         Creating directory "Debug\\CompilerIdC.tlog\\".
@@ -38,7 +38,7 @@ events:
         CMakeCCompilerId.c
       Link:
         C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
-        CompilerIdC.vcxproj -> C:\\Users\\Ryan\\Desktop\\Veritas-main\\build\\CMakeFiles\\3.26.2\\CompilerIdC\\CompilerIdC.exe
+        CompilerIdC.vcxproj -> C:\\Users\\Ryan\\Desktop\\Veritas\\build\\CMakeFiles\\3.26.2\\CompilerIdC\\CompilerIdC.exe
       PostBuildEvent:
         for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
         :VCEnd
@@ -46,13 +46,13 @@ events:
       FinalizeBuildStatus:
         Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
         Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
-      Done Building Project "C:\\Users\\Ryan\\Desktop\\Veritas-main\\build\\CMakeFiles\\3.26.2\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      Done Building Project "C:\\Users\\Ryan\\Desktop\\Veritas\\build\\CMakeFiles\\3.26.2\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
       
       Build succeeded.
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.56
+      Time Elapsed 00:00:01.31
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -60,7 +60,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
       
       The C compiler identification is MSVC, found in:
-        C:/Users/Ryan/Desktop/Veritas-main/build/CMakeFiles/3.26.2/CompilerIdC/CompilerIdC.exe
+        C:/Users/Ryan/Desktop/Veritas/build/CMakeFiles/3.26.2/CompilerIdC/CompilerIdC.exe
       
   -
     kind: "message-v1"
@@ -80,8 +80,8 @@ events:
       Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
       Copyright (C) Microsoft Corporation. All rights reserved.
       
-      Build started 4/6/2023 9:08:43 PM.
-      Project "C:\\Users\\Ryan\\Desktop\\Veritas-main\\build\\CMakeFiles\\3.26.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      Build started 4/8/2023 5:19:24 PM.
+      Project "C:\\Users\\Ryan\\Desktop\\Veritas\\build\\CMakeFiles\\3.26.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
       PrepareForBuild:
         Creating directory "Debug\\".
         Creating directory "Debug\\CompilerIdCXX.tlog\\".
@@ -92,7 +92,7 @@ events:
         CMakeCXXCompilerId.cpp
       Link:
         C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
-        CompilerIdCXX.vcxproj -> C:\\Users\\Ryan\\Desktop\\Veritas-main\\build\\CMakeFiles\\3.26.2\\CompilerIdCXX\\CompilerIdCXX.exe
+        CompilerIdCXX.vcxproj -> C:\\Users\\Ryan\\Desktop\\Veritas\\build\\CMakeFiles\\3.26.2\\CompilerIdCXX\\CompilerIdCXX.exe
       PostBuildEvent:
         for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
         :VCEnd
@@ -100,13 +100,13 @@ events:
       FinalizeBuildStatus:
         Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
         Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
-      Done Building Project "C:\\Users\\Ryan\\Desktop\\Veritas-main\\build\\CMakeFiles\\3.26.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      Done Building Project "C:\\Users\\Ryan\\Desktop\\Veritas\\build\\CMakeFiles\\3.26.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
       
       Build succeeded.
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.42
+      Time Elapsed 00:00:00.79
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -114,7 +114,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
       
       The CXX compiler identification is MSVC, found in:
-        C:/Users/Ryan/Desktop/Veritas-main/build/CMakeFiles/3.26.2/CompilerIdCXX/CompilerIdCXX.exe
+        C:/Users/Ryan/Desktop/Veritas/build/CMakeFiles/3.26.2/CompilerIdCXX/CompilerIdCXX.exe
       
   -
     kind: "try_compile-v1"
@@ -125,8 +125,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/Ryan/Desktop/Veritas-main/build/CMakeFiles/CMakeScratch/TryCompile-6glozx"
-      binary: "C:/Users/Ryan/Desktop/Veritas-main/build/CMakeFiles/CMakeScratch/TryCompile-6glozx"
+      source: "C:/Users/Ryan/Desktop/Veritas/build/CMakeFiles/CMakeScratch/TryCompile-e5ihqh"
+      binary: "C:/Users/Ryan/Desktop/Veritas/build/CMakeFiles/CMakeScratch/TryCompile-e5ihqh"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -135,38 +135,38 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: C:/Users/Ryan/Desktop/Veritas-main/build/CMakeFiles/CMakeScratch/TryCompile-6glozx
+        Change Dir: C:/Users/Ryan/Desktop/Veritas/build/CMakeFiles/CMakeScratch/TryCompile-e5ihqh
         
-        Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_ca97e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+        Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_d9013.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
         Copyright (C) Microsoft Corporation. All rights reserved.
         
-        Build started 4/6/2023 9:08:44 PM.
-        Project "C:\\Users\\Ryan\\Desktop\\Veritas-main\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6glozx\\cmTC_ca97e.vcxproj" on node 1 (default targets).
+        Build started 4/8/2023 5:19:25 PM.
+        Project "C:\\Users\\Ryan\\Desktop\\Veritas\\build\\CMakeFiles\\CMakeScratch\\TryCompile-e5ihqh\\cmTC_d9013.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_ca97e.dir\\Debug\\".
-          Creating directory "C:\\Users\\Ryan\\Desktop\\Veritas-main\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6glozx\\Debug\\".
-          Creating directory "cmTC_ca97e.dir\\Debug\\cmTC_ca97e.tlog\\".
+          Creating directory "cmTC_d9013.dir\\Debug\\".
+          Creating directory "C:\\Users\\Ryan\\Desktop\\Veritas\\build\\CMakeFiles\\CMakeScratch\\TryCompile-e5ihqh\\Debug\\".
+          Creating directory "cmTC_d9013.dir\\Debug\\cmTC_d9013.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_ca97e.dir\\Debug\\cmTC_ca97e.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Creating "cmTC_d9013.dir\\Debug\\cmTC_d9013.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ca97e.dir\\Debug\\\\" /Fd"cmTC_ca97e.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d9013.dir\\Debug\\\\" /Fd"cmTC_d9013.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30147 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
           CMakeCCompilerABI.c
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ca97e.dir\\Debug\\\\" /Fd"cmTC_ca97e.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d9013.dir\\Debug\\\\" /Fd"cmTC_d9013.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
         Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Ryan\\Desktop\\Veritas-main\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6glozx\\Debug\\cmTC_ca97e.exe" /INCREMENTAL /ILK:"cmTC_ca97e.dir\\Debug\\cmTC_ca97e.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Ryan/Desktop/Veritas-main/build/CMakeFiles/CMakeScratch/TryCompile-6glozx/Debug/cmTC_ca97e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Ryan/Desktop/Veritas-main/build/CMakeFiles/CMakeScratch/TryCompile-6glozx/Debug/cmTC_ca97e.lib" /MACHINE:X64  /machine:x64 cmTC_ca97e.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_ca97e.vcxproj -> C:\\Users\\Ryan\\Desktop\\Veritas-main\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6glozx\\Debug\\cmTC_ca97e.exe
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Ryan\\Desktop\\Veritas\\build\\CMakeFiles\\CMakeScratch\\TryCompile-e5ihqh\\Debug\\cmTC_d9013.exe" /INCREMENTAL /ILK:"cmTC_d9013.dir\\Debug\\cmTC_d9013.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Ryan/Desktop/Veritas/build/CMakeFiles/CMakeScratch/TryCompile-e5ihqh/Debug/cmTC_d9013.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Ryan/Desktop/Veritas/build/CMakeFiles/CMakeScratch/TryCompile-e5ihqh/Debug/cmTC_d9013.lib" /MACHINE:X64  /machine:x64 cmTC_d9013.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_d9013.vcxproj -> C:\\Users\\Ryan\\Desktop\\Veritas\\build\\CMakeFiles\\CMakeScratch\\TryCompile-e5ihqh\\Debug\\cmTC_d9013.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_ca97e.dir\\Debug\\cmTC_ca97e.tlog\\unsuccessfulbuild".
-          Touching "cmTC_ca97e.dir\\Debug\\cmTC_ca97e.tlog\\cmTC_ca97e.lastbuildstate".
-        Done Building Project "C:\\Users\\Ryan\\Desktop\\Veritas-main\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6glozx\\cmTC_ca97e.vcxproj" (default targets).
+          Deleting file "cmTC_d9013.dir\\Debug\\cmTC_d9013.tlog\\unsuccessfulbuild".
+          Touching "cmTC_d9013.dir\\Debug\\cmTC_d9013.tlog\\cmTC_d9013.lastbuildstate".
+        Done Building Project "C:\\Users\\Ryan\\Desktop\\Veritas\\build\\CMakeFiles\\CMakeScratch\\TryCompile-e5ihqh\\cmTC_d9013.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:01.34
+        Time Elapsed 00:00:02.27
         
       exitCode: 0
   -
@@ -178,8 +178,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/Ryan/Desktop/Veritas-main/build/CMakeFiles/CMakeScratch/TryCompile-mqqtao"
-      binary: "C:/Users/Ryan/Desktop/Veritas-main/build/CMakeFiles/CMakeScratch/TryCompile-mqqtao"
+      source: "C:/Users/Ryan/Desktop/Veritas/build/CMakeFiles/CMakeScratch/TryCompile-yx35ch"
+      binary: "C:/Users/Ryan/Desktop/Veritas/build/CMakeFiles/CMakeScratch/TryCompile-yx35ch"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -188,38 +188,38 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: C:/Users/Ryan/Desktop/Veritas-main/build/CMakeFiles/CMakeScratch/TryCompile-mqqtao
+        Change Dir: C:/Users/Ryan/Desktop/Veritas/build/CMakeFiles/CMakeScratch/TryCompile-yx35ch
         
-        Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_f99ff.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+        Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_6cb6c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
         Copyright (C) Microsoft Corporation. All rights reserved.
         
-        Build started 4/6/2023 9:08:46 PM.
-        Project "C:\\Users\\Ryan\\Desktop\\Veritas-main\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mqqtao\\cmTC_f99ff.vcxproj" on node 1 (default targets).
+        Build started 4/8/2023 5:19:28 PM.
+        Project "C:\\Users\\Ryan\\Desktop\\Veritas\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yx35ch\\cmTC_6cb6c.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_f99ff.dir\\Debug\\".
-          Creating directory "C:\\Users\\Ryan\\Desktop\\Veritas-main\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mqqtao\\Debug\\".
-          Creating directory "cmTC_f99ff.dir\\Debug\\cmTC_f99ff.tlog\\".
+          Creating directory "cmTC_6cb6c.dir\\Debug\\".
+          Creating directory "C:\\Users\\Ryan\\Desktop\\Veritas\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yx35ch\\Debug\\".
+          Creating directory "cmTC_6cb6c.dir\\Debug\\cmTC_6cb6c.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_f99ff.dir\\Debug\\cmTC_f99ff.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Creating "cmTC_6cb6c.dir\\Debug\\cmTC_6cb6c.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_f99ff.dir\\Debug\\\\" /Fd"cmTC_f99ff.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_6cb6c.dir\\Debug\\\\" /Fd"cmTC_6cb6c.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30147 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
           CMakeCXXCompilerABI.cpp
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_f99ff.dir\\Debug\\\\" /Fd"cmTC_f99ff.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_6cb6c.dir\\Debug\\\\" /Fd"cmTC_6cb6c.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
         Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Ryan\\Desktop\\Veritas-main\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mqqtao\\Debug\\cmTC_f99ff.exe" /INCREMENTAL /ILK:"cmTC_f99ff.dir\\Debug\\cmTC_f99ff.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Ryan/Desktop/Veritas-main/build/CMakeFiles/CMakeScratch/TryCompile-mqqtao/Debug/cmTC_f99ff.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Ryan/Desktop/Veritas-main/build/CMakeFiles/CMakeScratch/TryCompile-mqqtao/Debug/cmTC_f99ff.lib" /MACHINE:X64  /machine:x64 cmTC_f99ff.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_f99ff.vcxproj -> C:\\Users\\Ryan\\Desktop\\Veritas-main\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mqqtao\\Debug\\cmTC_f99ff.exe
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Ryan\\Desktop\\Veritas\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yx35ch\\Debug\\cmTC_6cb6c.exe" /INCREMENTAL /ILK:"cmTC_6cb6c.dir\\Debug\\cmTC_6cb6c.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Ryan/Desktop/Veritas/build/CMakeFiles/CMakeScratch/TryCompile-yx35ch/Debug/cmTC_6cb6c.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Ryan/Desktop/Veritas/build/CMakeFiles/CMakeScratch/TryCompile-yx35ch/Debug/cmTC_6cb6c.lib" /MACHINE:X64  /machine:x64 cmTC_6cb6c.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_6cb6c.vcxproj -> C:\\Users\\Ryan\\Desktop\\Veritas\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yx35ch\\Debug\\cmTC_6cb6c.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_f99ff.dir\\Debug\\cmTC_f99ff.tlog\\unsuccessfulbuild".
-          Touching "cmTC_f99ff.dir\\Debug\\cmTC_f99ff.tlog\\cmTC_f99ff.lastbuildstate".
-        Done Building Project "C:\\Users\\Ryan\\Desktop\\Veritas-main\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mqqtao\\cmTC_f99ff.vcxproj" (default targets).
+          Deleting file "cmTC_6cb6c.dir\\Debug\\cmTC_6cb6c.tlog\\unsuccessfulbuild".
+          Touching "cmTC_6cb6c.dir\\Debug\\cmTC_6cb6c.tlog\\cmTC_6cb6c.lastbuildstate".
+        Done Building Project "C:\\Users\\Ryan\\Desktop\\Veritas\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yx35ch\\cmTC_6cb6c.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.41
+        Time Elapsed 00:00:01.11
         
       exitCode: 0
 ...

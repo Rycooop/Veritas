@@ -1,0 +1,6 @@
+C:/Users/Ryan/Desktop/Veritas/out/build/x64-Debug/CMakeFiles/Veritas.dir
+C:/Users/Ryan/Desktop/Veritas/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/Ryan/Desktop/Veritas/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Ryan/Desktop/Veritas/out/build/x64-Debug/VeritasTest/CMakeFiles/VeritasTest.dir
+C:/Users/Ryan/Desktop/Veritas/out/build/x64-Debug/VeritasTest/CMakeFiles/edit_cache.dir
+C:/Users/Ryan/Desktop/Veritas/out/build/x64-Debug/VeritasTest/CMakeFiles/rebuild_cache.dir

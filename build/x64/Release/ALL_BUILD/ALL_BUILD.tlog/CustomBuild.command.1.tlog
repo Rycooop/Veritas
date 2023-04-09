@@ -1,6 +1,6 @@
-^C:\USERS\RYAN\DESKTOP\VERITAS-MAIN\CMAKELISTS.TXT
+^C:\USERS\RYAN\DESKTOP\VERITAS\CMAKELISTS.TXT
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Ryan/Desktop/Veritas-main -BC:/Users/Ryan/Desktop/Veritas-main/build --check-stamp-file C:/Users/Ryan/Desktop/Veritas-main/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Ryan/Desktop/Veritas -BC:/Users/Ryan/Desktop/Veritas/build --check-stamp-file C:/Users/Ryan/Desktop/Veritas/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Ryan/Desktop/Veritas-main/VeritasTest
+# Install script for directory: C:/Users/Ryan/Desktop/Veritas/VeritasTest
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -2,13 +2,13 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\Ryan\Desktop\Veritas-main\build\x64\Release\ZERO_CHECK</FullPath>
+      <FullPath>C:\Users\Ryan\Desktop\Veritas\build\x64\Release\ZERO_CHECK</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\Users\Ryan\Desktop\Veritas-main\build\VeritasTest\Release\VeritasTest.exe</FullPath>
+      <FullPath>C:\Users\Ryan\Desktop\Veritas\build\VeritasTest\Release\VeritasTest.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\Users\Ryan\Desktop\Veritas-main\build\x64\Release\ALL_BUILD</FullPath>
+      <FullPath>C:\Users\Ryan\Desktop\Veritas\build\x64\Release\ALL_BUILD</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

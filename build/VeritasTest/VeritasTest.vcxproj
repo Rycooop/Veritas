@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{3F0AFB2A-B34F-3354-868E-160407D28878}</ProjectGuid>
+    <ProjectGuid>{1F35E7FE-214E-35CA-A00D-D82ECB050A0B}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -59,25 +59,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Ryan\Desktop\Veritas-main\build\VeritasTest\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Ryan\Desktop\Veritas\build\VeritasTest\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">VeritasTest.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">VeritasTest</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Ryan\Desktop\Veritas-main\build\VeritasTest\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Ryan\Desktop\Veritas\build\VeritasTest\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">VeritasTest.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">VeritasTest</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Ryan\Desktop\Veritas-main\build\VeritasTest\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Ryan\Desktop\Veritas\build\VeritasTest\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">VeritasTest.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">VeritasTest</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Ryan\Desktop\Veritas-main\build\VeritasTest\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Ryan\Desktop\Veritas\build\VeritasTest\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">VeritasTest.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">VeritasTest</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
@@ -86,7 +86,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Ryan\Desktop\Veritas-main\includes;C:\Users\Ryan\Desktop\Veritas-main\includes\Dx;C:\Users\Ryan\Desktop\Veritas-main\VeritasTest\..\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Ryan\Desktop\Veritas\includes;C:\Users\Ryan\Desktop\Veritas\includes\Dx;C:\Users\Ryan\Desktop\Veritas\VeritasTest\..\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -103,10 +103,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Ryan\Desktop\Veritas-main\includes;C:\Users\Ryan\Desktop\Veritas-main\includes\Dx;C:\Users\Ryan\Desktop\Veritas-main\VeritasTest\..\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Ryan\Desktop\Veritas\includes;C:\Users\Ryan\Desktop\Veritas\includes\Dx;C:\Users\Ryan\Desktop\Veritas\VeritasTest\..\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Ryan\Desktop\Veritas-main\includes;C:\Users\Ryan\Desktop\Veritas-main\includes\Dx;C:\Users\Ryan\Desktop\Veritas-main\VeritasTest\..\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Ryan\Desktop\Veritas\includes;C:\Users\Ryan\Desktop\Veritas\includes\Dx;C:\Users\Ryan\Desktop\Veritas\VeritasTest\..\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -115,12 +115,12 @@
     </Midl>
     <Link>
       <AdditionalDependencies>..\Debug\Veritas.lib;d3d9.lib;d3dx9.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:/Users/Ryan/Desktop/Veritas-main/lib;C:/Users/Ryan/Desktop/Veritas-main/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:/Users/Ryan/Desktop/Veritas/lib;C:/Users/Ryan/Desktop/Veritas/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/Ryan/Desktop/Veritas-main/build/VeritasTest/Debug/VeritasTest.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/Ryan/Desktop/Veritas-main/build/VeritasTest/Debug/VeritasTest.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/Ryan/Desktop/Veritas/build/VeritasTest/Debug/VeritasTest.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Ryan/Desktop/Veritas/build/VeritasTest/Debug/VeritasTest.pdb</ProgramDataBaseFile>
       <SubSystem>Windows</SubSystem>
     </Link>
     <ProjectReference>
@@ -129,7 +129,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Ryan\Desktop\Veritas-main\includes;C:\Users\Ryan\Desktop\Veritas-main\includes\Dx;C:\Users\Ryan\Desktop\Veritas-main\VeritasTest\..\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Ryan\Desktop\Veritas\includes;C:\Users\Ryan\Desktop\Veritas\includes\Dx;C:\Users\Ryan\Desktop\Veritas\VeritasTest\..\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
@@ -146,10 +146,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Ryan\Desktop\Veritas-main\includes;C:\Users\Ryan\Desktop\Veritas-main\includes\Dx;C:\Users\Ryan\Desktop\Veritas-main\VeritasTest\..\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Ryan\Desktop\Veritas\includes;C:\Users\Ryan\Desktop\Veritas\includes\Dx;C:\Users\Ryan\Desktop\Veritas\VeritasTest\..\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Ryan\Desktop\Veritas-main\includes;C:\Users\Ryan\Desktop\Veritas-main\includes\Dx;C:\Users\Ryan\Desktop\Veritas-main\VeritasTest\..\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Ryan\Desktop\Veritas\includes;C:\Users\Ryan\Desktop\Veritas\includes\Dx;C:\Users\Ryan\Desktop\Veritas\VeritasTest\..\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -158,12 +158,12 @@
     </Midl>
     <Link>
       <AdditionalDependencies>..\Release\Veritas.lib;d3d9.lib;d3dx9.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:/Users/Ryan/Desktop/Veritas-main/lib;C:/Users/Ryan/Desktop/Veritas-main/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:/Users/Ryan/Desktop/Veritas/lib;C:/Users/Ryan/Desktop/Veritas/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/Ryan/Desktop/Veritas-main/build/VeritasTest/Release/VeritasTest.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/Ryan/Desktop/Veritas-main/build/VeritasTest/Release/VeritasTest.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/Ryan/Desktop/Veritas/build/VeritasTest/Release/VeritasTest.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Ryan/Desktop/Veritas/build/VeritasTest/Release/VeritasTest.pdb</ProgramDataBaseFile>
       <SubSystem>Windows</SubSystem>
     </Link>
     <ProjectReference>
@@ -172,7 +172,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Ryan\Desktop\Veritas-main\includes;C:\Users\Ryan\Desktop\Veritas-main\includes\Dx;C:\Users\Ryan\Desktop\Veritas-main\VeritasTest\..\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Ryan\Desktop\Veritas\includes;C:\Users\Ryan\Desktop\Veritas\includes\Dx;C:\Users\Ryan\Desktop\Veritas\VeritasTest\..\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
@@ -189,10 +189,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Ryan\Desktop\Veritas-main\includes;C:\Users\Ryan\Desktop\Veritas-main\includes\Dx;C:\Users\Ryan\Desktop\Veritas-main\VeritasTest\..\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Ryan\Desktop\Veritas\includes;C:\Users\Ryan\Desktop\Veritas\includes\Dx;C:\Users\Ryan\Desktop\Veritas\VeritasTest\..\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Ryan\Desktop\Veritas-main\includes;C:\Users\Ryan\Desktop\Veritas-main\includes\Dx;C:\Users\Ryan\Desktop\Veritas-main\VeritasTest\..\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Ryan\Desktop\Veritas\includes;C:\Users\Ryan\Desktop\Veritas\includes\Dx;C:\Users\Ryan\Desktop\Veritas\VeritasTest\..\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -201,12 +201,12 @@
     </Midl>
     <Link>
       <AdditionalDependencies>..\MinSizeRel\Veritas.lib;d3d9.lib;d3dx9.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:/Users/Ryan/Desktop/Veritas-main/lib;C:/Users/Ryan/Desktop/Veritas-main/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:/Users/Ryan/Desktop/Veritas/lib;C:/Users/Ryan/Desktop/Veritas/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/Ryan/Desktop/Veritas-main/build/VeritasTest/MinSizeRel/VeritasTest.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/Ryan/Desktop/Veritas-main/build/VeritasTest/MinSizeRel/VeritasTest.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/Ryan/Desktop/Veritas/build/VeritasTest/MinSizeRel/VeritasTest.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Ryan/Desktop/Veritas/build/VeritasTest/MinSizeRel/VeritasTest.pdb</ProgramDataBaseFile>
       <SubSystem>Windows</SubSystem>
     </Link>
     <ProjectReference>
@@ -215,7 +215,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Ryan\Desktop\Veritas-main\includes;C:\Users\Ryan\Desktop\Veritas-main\includes\Dx;C:\Users\Ryan\Desktop\Veritas-main\VeritasTest\..\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Ryan\Desktop\Veritas\includes;C:\Users\Ryan\Desktop\Veritas\includes\Dx;C:\Users\Ryan\Desktop\Veritas\VeritasTest\..\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -231,10 +231,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Ryan\Desktop\Veritas-main\includes;C:\Users\Ryan\Desktop\Veritas-main\includes\Dx;C:\Users\Ryan\Desktop\Veritas-main\VeritasTest\..\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Ryan\Desktop\Veritas\includes;C:\Users\Ryan\Desktop\Veritas\includes\Dx;C:\Users\Ryan\Desktop\Veritas\VeritasTest\..\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Ryan\Desktop\Veritas-main\includes;C:\Users\Ryan\Desktop\Veritas-main\includes\Dx;C:\Users\Ryan\Desktop\Veritas-main\VeritasTest\..\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Ryan\Desktop\Veritas\includes;C:\Users\Ryan\Desktop\Veritas\includes\Dx;C:\Users\Ryan\Desktop\Veritas\VeritasTest\..\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -243,12 +243,12 @@
     </Midl>
     <Link>
       <AdditionalDependencies>..\RelWithDebInfo\Veritas.lib;d3d9.lib;d3dx9.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:/Users/Ryan/Desktop/Veritas-main/lib;C:/Users/Ryan/Desktop/Veritas-main/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:/Users/Ryan/Desktop/Veritas/lib;C:/Users/Ryan/Desktop/Veritas/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/Ryan/Desktop/Veritas-main/build/VeritasTest/RelWithDebInfo/VeritasTest.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/Ryan/Desktop/Veritas-main/build/VeritasTest/RelWithDebInfo/VeritasTest.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/Ryan/Desktop/Veritas/build/VeritasTest/RelWithDebInfo/VeritasTest.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Ryan/Desktop/Veritas/build/VeritasTest/RelWithDebInfo/VeritasTest.pdb</ProgramDataBaseFile>
       <SubSystem>Windows</SubSystem>
     </Link>
     <ProjectReference>
@@ -256,11 +256,11 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Ryan\Desktop\Veritas-main\VeritasTest\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\Ryan\Desktop\Veritas\VeritasTest\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Ryan/Desktop/Veritas-main/VeritasTest/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Ryan/Desktop/Veritas/VeritasTest/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Ryan/Desktop/Veritas-main -BC:/Users/Ryan/Desktop/Veritas-main/build --check-stamp-file C:/Users/Ryan/Desktop/Veritas-main/build/VeritasTest/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Ryan/Desktop/Veritas -BC:/Users/Ryan/Desktop/Veritas/build --check-stamp-file C:/Users/Ryan/Desktop/Veritas/build/VeritasTest/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -269,11 +269,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Ryan\Desktop\Veritas-main\build\VeritasTest\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Ryan\Desktop\Veritas\build\VeritasTest\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Ryan/Desktop/Veritas-main/VeritasTest/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Ryan/Desktop/Veritas/VeritasTest/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Ryan/Desktop/Veritas-main -BC:/Users/Ryan/Desktop/Veritas-main/build --check-stamp-file C:/Users/Ryan/Desktop/Veritas-main/build/VeritasTest/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Ryan/Desktop/Veritas -BC:/Users/Ryan/Desktop/Veritas/build --check-stamp-file C:/Users/Ryan/Desktop/Veritas/build/VeritasTest/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -282,11 +282,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Ryan\Desktop\Veritas-main\build\VeritasTest\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Ryan\Desktop\Veritas\build\VeritasTest\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Ryan/Desktop/Veritas-main/VeritasTest/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Ryan/Desktop/Veritas/VeritasTest/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Ryan/Desktop/Veritas-main -BC:/Users/Ryan/Desktop/Veritas-main/build --check-stamp-file C:/Users/Ryan/Desktop/Veritas-main/build/VeritasTest/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Ryan/Desktop/Veritas -BC:/Users/Ryan/Desktop/Veritas/build --check-stamp-file C:/Users/Ryan/Desktop/Veritas/build/VeritasTest/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -295,11 +295,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Ryan\Desktop\Veritas-main\build\VeritasTest\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Ryan\Desktop\Veritas\build\VeritasTest\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Ryan/Desktop/Veritas-main/VeritasTest/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Ryan/Desktop/Veritas/VeritasTest/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Ryan/Desktop/Veritas-main -BC:/Users/Ryan/Desktop/Veritas-main/build --check-stamp-file C:/Users/Ryan/Desktop/Veritas-main/build/VeritasTest/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Ryan/Desktop/Veritas -BC:/Users/Ryan/Desktop/Veritas/build --check-stamp-file C:/Users/Ryan/Desktop/Veritas/build/VeritasTest/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -308,22 +308,22 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Ryan\Desktop\Veritas-main\build\VeritasTest\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Ryan\Desktop\Veritas\build\VeritasTest\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\Ryan\Desktop\Veritas-main\VeritasTest\main.cpp" />
+    <ClCompile Include="C:\Users\Ryan\Desktop\Veritas\VeritasTest\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\Ryan\Desktop\Veritas-main\build\ZERO_CHECK.vcxproj">
-      <Project>{41FE30A5-33C4-3219-B010-89FC85CAEF9F}</Project>
+    <ProjectReference Include="C:\Users\Ryan\Desktop\Veritas\build\ZERO_CHECK.vcxproj">
+      <Project>{3C8A37C8-FD13-3D85-8DC3-340810F6ED69}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\Ryan\Desktop\Veritas-main\build\Veritas.vcxproj">
-      <Project>{24287CB4-51DA-3C81-A613-E0295B408B76}</Project>
+    <ProjectReference Include="C:\Users\Ryan\Desktop\Veritas\build\Veritas.vcxproj">
+      <Project>{E4D18E4B-E4E7-3CA8-B115-A6493104D8BB}</Project>
       <Name>Veritas</Name>
     </ProjectReference>
   </ItemGroup>
