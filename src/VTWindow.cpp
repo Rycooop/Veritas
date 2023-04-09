@@ -3,38 +3,62 @@
 
 VTWindow::VTWindow() {
 	this->m_Window = NULL;
-	this->m_WindowWidth = 800;
-	this->m_WindowHeight = 600;
+	this->m_Screen = NULL;
+	this->m_Initialized = false;
 }
 
-void VTWindow::Create() {
-	const HINSTANCE hInstance = GetModuleHandle(NULL);
+bool VTWindow::Create() {
+	this->hInstance = GetModuleHandle(NULL);
 
-	if (!this->RegisterWindowClass(hInstance, "VTWindowClass")) {
+	this->m_Screen = new VTScreen();
+	this->m_Screen->ScreenWidth = 800;
+	this->m_Screen->ScreenHeight = 600;
+	this->m_Screen->ScreenX = 100;
+	this->m_Screen->ScreenY = 100;
+
+	if (!this->RegisterWindowClass(this->hInstance, "VTWindowClass")) {
 		//Log
 		std::cout << "[-] Failed to create window class" << std::endl;
-		return;
+		return false;
 	}
 
-	this->m_Renderer = new VTRenderer();
+	std::thread(&VTWindow::CreateWindowWithThread, this).detach();
 
-	std::thread(&VTWindow::CreateWindowWithThread, this, hInstance).detach();
+	while (!this->m_Initialized) {
+		Sleep(1);
+	}
+
+	return true;
 }
 
+void VTWindow::SetRenderTargets(std::vector<VTObject*>* targets) {
+	this->m_Renderer->SetRenderTargets(targets);
+}
+
+//---------------------------------------------------------------------------------------------------------------
+
 LRESULT VTWindow::MessageProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam) {
-	switch (message)
-	{
+	switch (message) {
 		case WM_DESTROY: {
 			ExitProcess(0);
 			return 0;
+			}
+		case WM_NCHITTEST: {
+			LRESULT hit = DefWindowProc(hwnd, message, wParam, lParam);
+			if (hit == HTCLIENT) hit = HTCAPTION;
+			return hit;
 		}
-		break;
+
+		default:
+			break;
 	}
 
 	return DefWindowProc(hwnd, message, wParam, lParam);
 }
 
 bool VTWindow::RegisterWindowClass(const HINSTANCE hInstance, const std::string& className) {
+	if (!this->m_Screen) return false;
+
 	WNDCLASSEX wc;
 	ZeroMemory(&wc, sizeof(WNDCLASSEX));
 	wc.cbSize = sizeof(WNDCLASSEX);
@@ -48,14 +72,16 @@ bool VTWindow::RegisterWindowClass(const HINSTANCE hInstance, const std::string&
 	return RegisterClassEx(&wc);
 }
 
-bool VTWindow::CreateWindowWithThread(HINSTANCE hInstance) {
-	this->m_Window = CreateWindowEx(NULL, "VTWindowClass", "Veritas", WS_OVERLAPPEDWINDOW, 0, 0, this->m_WindowWidth, this->m_WindowHeight, NULL, NULL, hInstance, NULL);
-	ShowWindow(this->m_Window, 10);
+bool VTWindow::CreateWindowWithThread() {
+	this->m_Window = CreateWindowEx(NULL, "VTWindowClass", "Veritas", NULL, this->m_Screen->ScreenX, this->m_Screen->ScreenY, this->m_Screen->ScreenWidth, this->m_Screen->ScreenHeight, NULL, NULL, this->hInstance, NULL);
+	ShowWindow(this->m_Window, SW_SHOW);
 
-	this->m_Renderer->SetWindow(this->m_Window);
+	this->m_Renderer = new VTRenderer(this->m_Window);
+	this->m_Renderer->SetScreen(this->m_Screen);
 	if (!this->m_Renderer->Init()) {
 		return false;
 	}
+	this->m_Initialized = true;
 
 	MSG msg;
 	while (true) {
@@ -64,7 +90,7 @@ bool VTWindow::CreateWindowWithThread(HINSTANCE hInstance) {
 			DispatchMessage(&msg);
 		}
 
-		if (msg.message == WM_QUIT) break;
+		this->m_Renderer->RenderFrame();
 	}
 
 	return false;

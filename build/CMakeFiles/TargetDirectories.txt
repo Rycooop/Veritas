@@ -1,0 +1,4 @@
+C:/Users/Ryan/Desktop/Veritas-main/build/CMakeFiles/Veritas.dir
+C:/Users/Ryan/Desktop/Veritas-main/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Ryan/Desktop/Veritas-main/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/Ryan/Desktop/Veritas-main/build/VeritasTest/CMakeFiles/VeritasTest.dir

@@ -6,8 +6,8 @@ file(GLOB Sources src/*.cpp)
 
 add_library(Veritas STATIC ${Sources})
 
-target_include_directories(Veritas PRIVATE includes/Dx)
-target_link_directories(Veritas PRIVATE lib)
-target_link_libraries(Veritas d3d9)
+include_directories(includes/Dx)
+target_link_directories(Veritas PUBLIC lib)
+target_link_libraries(Veritas d3d9 d3dx9)
 
 add_subdirectory(VeritasTest)
