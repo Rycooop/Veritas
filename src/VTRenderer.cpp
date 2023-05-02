@@ -28,20 +28,20 @@ bool VTRenderer::Init() {
 		return false;
 	}
 
-	this->m_d3ddev->SetRenderState(D3DRS_ALPHABLENDENABLE, TRUE);
+	// this->m_d3ddev->SetRenderState(D3DRS_ALPHABLENDENABLE, TRUE);
 
 	return true;
 }
 
 void VTRenderer::RenderFrame() {
-	this->m_d3ddev->Clear(0, NULL, D3DCLEAR_TARGET, D3DCOLOR_XRGB(30, 30, 30), 1.0f, 0);
+	this->m_d3ddev->Clear(0, 0, D3DCLEAR_TARGET, D3DCOLOR_ARGB(255, 30, 30, 30), 1.0f, 0);
 	this->m_d3ddev->BeginScene();
 
 	this->m_d3ddev->SetFVF(CUSTOM_FVF);
 
 	this->mut.lock();
 	for (const auto curr : *this->m_RenderTargets) {
-		curr->Render(this->m_d3ddev);
+		curr->Render();
 	}
 	this->mut.unlock();
 
@@ -56,6 +56,11 @@ void VTRenderer::Clean() {
 }
 
 void VTRenderer::SetScreen(VTScreen* screen) { this->m_Screen = screen; }
+
+void VTRenderer::SetMenu(VTMenu& menu) {
+	this->m_Menu = &menu;
+}
+
 
 void VTRenderer::SetRenderTargets(std::vector<VTObject*>* targets) {
 	std::lock_guard<std::mutex> _(this->mut);

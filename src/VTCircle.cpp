@@ -10,6 +10,8 @@ VTCircle::VTCircle(float x, float y, float radius, float res, D3DCOLOR color) {
 }
 
 void VTCircle::Init(LPDIRECT3DDEVICE9 _dev) {
+	this->m_d3ddev = _dev;
+
 	std::vector<Vertex> vertices(this->m_Res);
 
 	for (int i = 0; i < this->m_Res; i++) {
@@ -23,6 +25,6 @@ void VTCircle::Init(LPDIRECT3DDEVICE9 _dev) {
 	this->m_Vertices = vertices;
 }
 
-void VTCircle::Render(const LPDIRECT3DDEVICE9 _dev) {
-	_dev->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, this->m_Res - 1, this->m_Vertices.data(), sizeof(Vertex));
+void VTCircle::Render() {
+	this->m_d3ddev->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, this->m_Res - 1, this->m_Vertices.data(), sizeof(Vertex));
 }

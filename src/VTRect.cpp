@@ -8,7 +8,6 @@ VTRect::VTRect(float x, float y, float width, float height, D3DCOLOR color) {
 	this->m_Height = height;
 	this->m_Color = color;
 	this->m_Buffer = NULL;
-
 }
 
 void VTRect::Init(LPDIRECT3DDEVICE9 _dev) {
@@ -29,7 +28,7 @@ void VTRect::Init(LPDIRECT3DDEVICE9 _dev) {
 	this->m_Buffer->Unlock();
 }
 
-void VTRect::Render(const LPDIRECT3DDEVICE9 d3ddev) {
-	d3ddev->SetStreamSource(0, this->m_Buffer, 0, sizeof(Vertex));
-	d3ddev->DrawPrimitive(D3DPT_TRIANGLESTRIP, 0, 2);
+void VTRect::Render() {
+	this->m_d3ddev->SetStreamSource(0, this->m_Buffer, 0, sizeof(Vertex));
+	this->m_d3ddev->DrawPrimitive(D3DPT_TRIANGLESTRIP, 0, 2);
 }

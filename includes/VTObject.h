@@ -19,13 +19,15 @@ public:
 	VTObject() = default;
 
 	virtual void Init(LPDIRECT3DDEVICE9 _dev) = 0;
-	virtual void Render(const LPDIRECT3DDEVICE9 d3ddev) = 0;
+	virtual void Render() = 0;
 
 	float m_X;
 	float m_Y;
 	float m_Width;
 	float m_Height;
 	D3DCOLOR m_Color;
+
+	bool m_Clicked;
 
 protected:
 	LPDIRECT3DDEVICE9 m_d3ddev;

@@ -9,7 +9,7 @@ public:
 	VTCircle(float x, float y, float radius, float res, D3DCOLOR color);
 
 	void Init(LPDIRECT3DDEVICE9 _dev) override;
-	void Render(const LPDIRECT3DDEVICE9 _dev) override;
+	void Render() override;
 
 private:
 	std::vector<Vertex> m_Vertices;

@@ -16,7 +16,7 @@ public:
 	}
 
 	void Init(LPDIRECT3DDEVICE9 _dev) override;
-	void Render(const LPDIRECT3DDEVICE9 d3ddev) override;
+	void Render() override;
 
 private:
 	float m_X1;

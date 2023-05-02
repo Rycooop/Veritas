@@ -12,6 +12,8 @@ VTRoundedRect::VTRoundedRect(float x, float y, float w, float h, float rounding,
 }
 
 void VTRoundedRect::Init(LPDIRECT3DDEVICE9 _dev) {
+	this->m_d3ddev = _dev;
+
 	std::vector<Vertex> vertices, vertices2;
 	float roundingEffect = (this->m_Width / 100.f) + this->m_Rounding;
 
@@ -41,7 +43,7 @@ void VTRoundedRect::Init(LPDIRECT3DDEVICE9 _dev) {
 	memcpy(pVoid, vertices2.data(), vertices2.size() * sizeof(Vertex));
 	this->m_OverlapBuffer->Unlock();
 
-	this->m_Edges[0] = new VTCircle(this->m_X, this->m_Y + roundingEffect, roundingEffect, 100, this->m_Color);
+	this->m_Edges[0] = new VTCircle(this->m_X, this->m_Y + roundingEffect, roundingEffect, 100, this->m_Color) ;
 	this->m_Edges[1] = new VTCircle(this->m_X, this->m_Y + this->m_Height - roundingEffect, roundingEffect, 30, this->m_Color);
 	this->m_Edges[2] = new VTCircle(this->m_X + this->m_Width, this->m_Y + roundingEffect, roundingEffect, 30, this->m_Color);
 	this->m_Edges[3] = new VTCircle(this->m_X + this->m_Width, this->m_Y + this->m_Height - roundingEffect, roundingEffect, 30, this->m_Color);
@@ -50,25 +52,33 @@ void VTRoundedRect::Init(LPDIRECT3DDEVICE9 _dev) {
 		curr->Init(_dev);
 	}
 
-	float shadowOffset = this->m_Height * .15f;
+	float shadowOffset = this->m_Height * .05f;
+
+	//Take the same color for the shadow but .15 times the brightness
+	D3DCOLOR ShadowColor = D3DCOLOR_ARGB(0, 0, 0, 0);
+	ShadowColor |= (std::uint8_t)((this->m_Color & 0xff) * .15);
+	ShadowColor |= (std::uint8_t)(((this->m_Color >> 8) & 0xff) * .15) << 8;
+	ShadowColor |= (std::uint8_t)(((this->m_Color >> 16) & 0xff) * .15) << 16;
+	ShadowColor |= (std::uint8_t)(((this->m_Color >> 24) & 0xff) * .15) << 24;
+
 	if (this->m_HasShadow) {
-		this->m_Shadow = new VTLine(this->m_X - roundingEffect, this->m_Y + this->m_Height + (shadowOffset / 6), this->m_X + this->m_Width + roundingEffect, this->m_Y + this->m_Height + (shadowOffset / 6), shadowOffset, D3DCOLOR_ARGB(70, 100, 100, 100));
+		this->m_Shadow = new VTRoundedRect(this->m_X, this->m_Y + shadowOffset, this->m_Width, this->m_Height, this->m_Rounding, false, ShadowColor);
 		this->m_Shadow->Init(_dev);
 	}
 }
 
-void VTRoundedRect::Render(const LPDIRECT3DDEVICE9 _dev) {
+void VTRoundedRect::Render() {
 	//Render Shadow before object so it is underneath
 	if (this->m_HasShadow) {
-		this->m_Shadow->Render(_dev);
+		this->m_Shadow->Render();
 	}
 
-	_dev->SetStreamSource(0, this->m_Buffer, 0, sizeof(Vertex));
-	_dev->DrawPrimitive(D3DPT_TRIANGLESTRIP, 0, 2);
-	_dev->SetStreamSource(0, this->m_OverlapBuffer, 0, sizeof(Vertex));
-	_dev->DrawPrimitive(D3DPT_TRIANGLESTRIP, 0, 2);
+	this->m_d3ddev->SetStreamSource(0, this->m_Buffer, 0, sizeof(Vertex));
+	this->m_d3ddev->DrawPrimitive(D3DPT_TRIANGLESTRIP, 0, 2);
+	this->m_d3ddev->SetStreamSource(0, this->m_OverlapBuffer, 0, sizeof(Vertex));
+	this->m_d3ddev->DrawPrimitive(D3DPT_TRIANGLESTRIP, 0, 2);
 
 	for (const auto& curr : this->m_Edges) {
-		curr->Render(_dev);
+		curr->Render();
 	}
 }

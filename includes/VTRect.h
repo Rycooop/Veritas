@@ -9,7 +9,7 @@ public:
 	VTRect(float x, float y, float width, float height, D3DCOLOR color);
 
 	void Init(LPDIRECT3DDEVICE9 _dev) override;
-	void Render(const LPDIRECT3DDEVICE9 d3ddev) override;
+	void Render() override;
 	
 private:
 	LPDIRECT3DVERTEXBUFFER9 m_Buffer;

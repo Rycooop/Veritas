@@ -12,6 +12,7 @@
 #include <d3dx9.h>
 #include <iostream>
 #include <VTObject.h>
+#include <VTMenu.h>
 
 
 struct VTScreen {
@@ -30,10 +31,11 @@ public:
 	void Clean();
 
 	void SetScreen(VTScreen* screen);
+	void SetMenu(VTMenu& menu);
 	void SetRenderTargets(std::vector<VTObject*>* targets);
 
 	VTScreen* GetScreen() const { return this->m_Screen; }
-
+	
 private:
 	std::mutex mut;
 
@@ -42,8 +44,10 @@ private:
 	LPDIRECT3DVERTEXBUFFER9 m_vb;
 	HWND m_DeviceWindow;
 	VTScreen* m_Screen;
+	VTMenu* m_Menu;
 
 	std::vector<VTObject*>* m_RenderTargets;
+
 };
 
 #endif //VERITAS_RENDERER_H
