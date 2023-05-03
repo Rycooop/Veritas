@@ -11,6 +11,7 @@
 
 #include <VTRenderer.h>
 #include <VTObject.h>
+#include <VTTypeableObject.h>
 #include <VTMenu.h>
 
 
@@ -24,6 +25,9 @@ public:
 	void SetMenu(VTMenu& menu);
 	void SetRenderTargets(std::vector<VTObject*>* targets);
 
+	static void RegisterTypeableObject(VTTypeableObject* object);
+	static void RegisterKeystroke(char c);
+
 	static void NotifyClickableObjects(const POINT p);
 	static bool RegisterClickableObject(VTObject* object);
 
@@ -34,6 +38,7 @@ private:
 	bool CreateWindowWithThread();
 
 	static std::vector<VTObject*>* ClickableObjects;
+	static std::vector<VTTypeableObject*>* TypeableObjects;
 
 	HWND m_Window;
 	HINSTANCE hInstance;
@@ -41,7 +46,6 @@ private:
 	VTRenderer* m_Renderer;
 
 	bool m_Initialized;
-
 };
 
 

@@ -8,9 +8,11 @@ VTInputBox::VTInputBox(float x, float y, float width, float height, std::string 
 	this->m_Height = height;
 	this->m_BackgroundColor = backgroundColor;
 	this->m_TextColor = textColor;
+	this->m_CaptureEnabled = false;
+	this->m_Clicked = false;
 
 	this->m_PlaceholderText = new std::string(placeholder);
-	this->m_ValueText = &output;
+	this->m_OutputBuffer = &output;
 }
 
 void VTInputBox::Init(LPDIRECT3DDEVICE9 _dev) {
@@ -25,11 +27,25 @@ void VTInputBox::Init(LPDIRECT3DDEVICE9 _dev) {
 	this->m_Placeholder = new VTText(this->m_X, this->m_Y + (this->m_Height / 3.f), this->m_Height / 2.3, *this->m_PlaceholderText, false, PlaceholderColor);
 	this->m_Placeholder->Init(_dev);
 
+	this->m_Text = new VTText(this->m_X, this->m_Y + (this->m_Height / 3.f), this->m_Height / 2.3, "", false, this->m_TextColor);
+	this->m_Text->Init(_dev);
+	
 	this->m_Frame = new VTRect(this->m_X, this->m_Y, this->m_Width, this->m_Height, this->m_BackgroundColor);
 	this->m_Frame->Init(_dev);
+
+	VTWindow::RegisterClickableObject(this);
+	VTWindow::RegisterTypeableObject(this);
 }
 
 void VTInputBox::Render() {
 	this->m_Frame->Render();
-	this->m_Placeholder->Render();
+
+	if (this->m_Clicked) this->m_CaptureEnabled = true;
+	else this->m_CaptureEnabled = false;
+
+	if (this->m_CaptureEnabled) {
+		this->m_Text->UpdateText(*this->m_OutputBuffer);
+		this->m_Text->Render();
+	}
+	else this->m_Placeholder->Render();
 }

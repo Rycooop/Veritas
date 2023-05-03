@@ -11,6 +11,8 @@ public:
 	void Init(LPDIRECT3DDEVICE9 _dev) override;
 	void Render() override;
 
+	void UpdateText(std::string text) { this->m_Text = text; }
+
 private:
 	ID3DXFont* m_Font;
 	RECT m_FontRect;

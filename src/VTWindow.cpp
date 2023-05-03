@@ -8,6 +8,7 @@ VTWindow::VTWindow() {
 }
 
 std::vector<VTObject*>* VTWindow::ClickableObjects = new std::vector<VTObject*>();
+std::vector<VTTypeableObject*>* VTWindow::TypeableObjects = new std::vector<VTTypeableObject*>();
 
 bool VTWindow::Create() {
 	this->hInstance = GetModuleHandle(NULL);
@@ -41,8 +42,20 @@ void VTWindow::SetRenderTargets(std::vector<VTObject*>* targets) {
 	this->m_Renderer->SetRenderTargets(targets);
 }
 
+void VTWindow::RegisterTypeableObject(VTTypeableObject* object) {
+	if (object->m_X) {
+		VTWindow::TypeableObjects->push_back(object);
+	}
+}
+
+void VTWindow::RegisterKeystroke(char c) {
+	for (auto& curr : *VTWindow::TypeableObjects) {
+		//if (curr->m_CaptureEnabled) curr->m_OutputBuffer += c;
+	}
+}
+
 void VTWindow::NotifyClickableObjects(const POINT p) {
-	for (const auto& curr : *VTWindow::ClickableObjects) {
+	for (auto& curr : *VTWindow::ClickableObjects) {
 		if (curr->m_Clicked) continue;
 
 		if ((p.x >= curr->m_X && p.x <= curr->m_X + curr->m_Width) && (p.y >= curr->m_Y && p.y <= curr->m_Y + curr->m_Height)) {
@@ -71,7 +84,11 @@ LRESULT VTWindow::MessageProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lPa
 			return 0;
 		}
 		case WM_KEYDOWN: {
-			return 0;
+			if (char c = MapVirtualKey(wParam, MAPVK_VK_TO_CHAR)) {
+				VTWindow::RegisterKeystroke(c);
+			}
+
+			return DefWindowProc(hwnd, message, wParam, lParam);
 		}
 		case WM_NCLBUTTONDOWN: {
 			POINT MouseCoordinates = {};

@@ -1,12 +1,14 @@
 #ifndef VERITAS_INPUTBOX_H
 #define VERITAS_INPUTBOX_H
 
-#include <VTObject.h>
+#include <VTWindow.h>
+#include <VTTypeableObject.h>
 #include <VTRect.h>
 #include <VTText.h>
 #include <string>
 
-class VTInputBox : public VTObject {
+
+class VTInputBox : public VTTypeableObject {
 public:
 	VTInputBox(float x, float y, float width, float height, std::string placeholder, std::string& output, D3DCOLOR backgroundColor, D3DCOLOR textColor);
 
@@ -18,10 +20,9 @@ private:
 	D3DCOLOR m_BackgroundColor;
 
 	std::string* m_PlaceholderText;
-	std::string* m_ValueText;
 
 	VTText* m_Placeholder;
-	VTText* m_Value;
+	VTText* m_Text;
 	VTRect* m_Frame;
 };
 
