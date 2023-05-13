@@ -42,8 +42,10 @@ private:
 
 	HWND m_Window;
 	HINSTANCE hInstance;
+
 	VTScreen* m_Screen;
 	VTRenderer* m_Renderer;
+	std::unique_ptr<VTMenu> m_Menu;
 
 	bool m_Initialized;
 };

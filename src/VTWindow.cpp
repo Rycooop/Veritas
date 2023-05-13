@@ -50,17 +50,16 @@ void VTWindow::RegisterTypeableObject(VTTypeableObject* object) {
 
 void VTWindow::RegisterKeystroke(char c) {
 	for (auto& curr : *VTWindow::TypeableObjects) {
-		//if (curr->m_CaptureEnabled) curr->m_OutputBuffer += c;
+		if (curr->m_CaptureEnabled) *curr->m_OutputBuffer.get() += c;
 	}
 }
 
 void VTWindow::NotifyClickableObjects(const POINT p) {
 	for (auto& curr : *VTWindow::ClickableObjects) {
-		if (curr->m_Clicked) continue;
-
 		if ((p.x >= curr->m_X && p.x <= curr->m_X + curr->m_Width) && (p.y >= curr->m_Y && p.y <= curr->m_Y + curr->m_Height)) {
 			curr->m_Clicked = true;
 		}
+		else curr->m_Clicked = false;
 	}
 }
 
@@ -91,7 +90,7 @@ LRESULT VTWindow::MessageProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lPa
 			return DefWindowProc(hwnd, message, wParam, lParam);
 		}
 		case WM_NCLBUTTONDOWN: {
-			POINT MouseCoordinates = {};
+			static POINT MouseCoordinates = {};
 			MouseCoordinates.x = GET_X_LPARAM(lParam);
 			MouseCoordinates.y = GET_Y_LPARAM(lParam);
 

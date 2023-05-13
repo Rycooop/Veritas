@@ -7,6 +7,7 @@
 #include <VTDefs.h>
 #include <VTButton.h>
 #include <VTRoundedRect.h>
+#include <VTRectHollow.h>
 #include <VTInputBox.h>
 #include <VTText.h>
 #include <VTMenu.h>
@@ -34,9 +35,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR nCmdLine,
 	//VTText t1 = VTText(150.0, 150.0, 30.0, "Test Text", D3DCOLOR_ARGB(255, 0, 0, 0));
 	//VTText titleText = VTText(450, 120, 50, "Veritas", D3DCOLOR_ARGB(255, 255, 255, 255));
 	// VTCircle circ = VTCircle(150, 400, 50, 600, D3DCOLOR_ARGB(255, 255, 255, 0));
-	// VTRoundedRect rr = VTRoundedRect(350, 350, 260, 160, 12, true, D3DCOLOR_ARGB(255, 100, 100, 255));
+	// VTRoundedRect rr = VTRoundedRect(350, 350, 260, 160, 12, true, D3DCOLOR_ARGB(255, 255, 100, 100));
+	//VTRectHollow rh = VTRectHollow(100, 100, 200, 80, 9, D3DCOLOR_ARGB(255, 200, 100, 100));
 
-	VTText title = VTText(400, 100, 60, "Recon", true, D3DCOLOR_ARGB(255, 240, 240, 240));
+	VTText title = VTText(300, 100, 200, 1000, 60, "Recon", true, D3DCOLOR_ARGB(255, 240, 240, 240));
 	VTButton but = VTButton(350, 500, 100, 50, clicked, D3DCOLOR_ARGB(255, 255, 10, 20));
 
 	VTMenu menu = VTMenu("Hello", D3DCOLOR_ARGB(255, 255, 255, 255));
@@ -47,8 +49,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR nCmdLine,
 	VTInputBox inputPassword = VTInputBox(300, 350, 250, 50, "Password", password, D3DCOLOR_ARGB(100, 90, 90, 90), D3DCOLOR_ARGB(255, 255, 255, 255));
 
 	std::vector<VTObject*>* targs = new std::vector<VTObject*>();
+	//targs->push_back(&rr);
+	//targs->push_back(&rh);
 	targs->push_back(&title);
-	targs->push_back(&but);
+	//targs->push_back(&but);
 	targs->push_back(&inputUsername);
 	targs->push_back(&inputPassword);
 

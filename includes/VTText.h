@@ -6,7 +6,7 @@
 
 class VTText : public VTObject {
 public:
-	VTText(float x, float y, float size, const std::string& text, bool alignCenter, D3DCOLOR color);
+	VTText(float x, float y, float maxwidth, float maxheight, float size, const std::string& text, bool alignCenter, D3DCOLOR color);
 
 	void Init(LPDIRECT3DDEVICE9 _dev) override;
 	void Render() override;
@@ -16,6 +16,8 @@ public:
 private:
 	ID3DXFont* m_Font;
 	RECT m_FontRect;
+
+	float m_Size;
 	std::string m_Text;
 	bool m_Center;
 };

@@ -5,11 +5,11 @@
 
 class VTTypeableObject : public VTObject {
 public:
-	VTTypeableObject() = default;
+	VTTypeableObject() : m_CaptureEnabled(false) {}
 
 	bool m_CaptureEnabled;
 
-	std::string* m_OutputBuffer;
+	std::shared_ptr<std::string> m_OutputBuffer;
 };
 
 #endif //VERITAS_TYPEABLEOBJECT_H

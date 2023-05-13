@@ -62,7 +62,7 @@ void VTRoundedRect::Init(LPDIRECT3DDEVICE9 _dev) {
 	ShadowColor |= (std::uint8_t)(((this->m_Color >> 24) & 0xff) * .15) << 24;
 
 	if (this->m_HasShadow) {
-		this->m_Shadow = new VTRoundedRect(this->m_X, this->m_Y + shadowOffset, this->m_Width, this->m_Height, this->m_Rounding, false, ShadowColor);
+		this->m_Shadow = new VTRoundedRect(this->m_X + shadowOffset, this->m_Y + shadowOffset, this->m_Width, this->m_Height, this->m_Rounding, false, ShadowColor);
 		this->m_Shadow->Init(_dev);
 	}
 }
