@@ -18,6 +18,7 @@
 class VTWindow {
 public:
 	VTWindow();
+	VTWindow(VTScreen* screen);
 
 	bool Create();
 	inline bool IsInitialized() { return this->m_Initialized; }
@@ -47,7 +48,7 @@ private:
 	VTRenderer* m_Renderer;
 	std::unique_ptr<VTMenu> m_Menu;
 
-	bool m_Initialized;
+	static std::atomic<bool> m_Initialized;
 };
 
 

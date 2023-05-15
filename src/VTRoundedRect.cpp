@@ -2,7 +2,7 @@
 
 
 VTRoundedRect::VTRoundedRect(float x, float y, float w, float h, float rounding, bool hasShadow, D3DCOLOR color) {
-	this->m_X = x;
+	this->m_X = x - (w / 2);
 	this->m_Y = y;
 	this->m_Width = w;
 	this->m_Height = h;
@@ -43,10 +43,10 @@ void VTRoundedRect::Init(LPDIRECT3DDEVICE9 _dev) {
 	memcpy(pVoid, vertices2.data(), vertices2.size() * sizeof(Vertex));
 	this->m_OverlapBuffer->Unlock();
 
-	this->m_Edges[0] = new VTCircle(this->m_X, this->m_Y + roundingEffect, roundingEffect, 100, this->m_Color) ;
-	this->m_Edges[1] = new VTCircle(this->m_X, this->m_Y + this->m_Height - roundingEffect, roundingEffect, 30, this->m_Color);
-	this->m_Edges[2] = new VTCircle(this->m_X + this->m_Width, this->m_Y + roundingEffect, roundingEffect, 30, this->m_Color);
-	this->m_Edges[3] = new VTCircle(this->m_X + this->m_Width, this->m_Y + this->m_Height - roundingEffect, roundingEffect, 30, this->m_Color);
+	this->m_Edges[0] = new VTCircle(this->m_X + roundingEffect, this->m_Y + roundingEffect, roundingEffect, 90, this->m_Color) ;
+	this->m_Edges[1] = new VTCircle(this->m_X + roundingEffect, this->m_Y + this->m_Height - roundingEffect, roundingEffect, 90, this->m_Color);
+	this->m_Edges[2] = new VTCircle(this->m_X + this->m_Width + roundingEffect, this->m_Y + roundingEffect, roundingEffect, 90, this->m_Color);
+	this->m_Edges[3] = new VTCircle(this->m_X + this->m_Width + roundingEffect, this->m_Y + this->m_Height - roundingEffect, roundingEffect, 90, this->m_Color);
 
 	for (const auto& curr : this->m_Edges) {
 		curr->Init(_dev);
@@ -62,7 +62,7 @@ void VTRoundedRect::Init(LPDIRECT3DDEVICE9 _dev) {
 	ShadowColor |= (std::uint8_t)(((this->m_Color >> 24) & 0xff) * .15) << 24;
 
 	if (this->m_HasShadow) {
-		this->m_Shadow = new VTRoundedRect(this->m_X + shadowOffset, this->m_Y + shadowOffset, this->m_Width, this->m_Height, this->m_Rounding, false, ShadowColor);
+		this->m_Shadow = new VTRoundedRect(this->m_X + shadowOffset + (this->m_Width / 2), this->m_Y + shadowOffset, this->m_Width, this->m_Height, this->m_Rounding, false, ShadowColor);
 		this->m_Shadow->Init(_dev);
 	}
 }

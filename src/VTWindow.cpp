@@ -4,7 +4,11 @@
 VTWindow::VTWindow() {
 	this->m_Window = NULL;
 	this->m_Screen = NULL;
-	this->m_Initialized = false;
+}
+
+VTWindow::VTWindow(VTScreen* screen) {
+	this->m_Window = NULL;
+	this->m_Screen = screen;
 }
 
 std::vector<VTObject*>* VTWindow::ClickableObjects = new std::vector<VTObject*>();
@@ -13,11 +17,13 @@ std::vector<VTTypeableObject*>* VTWindow::TypeableObjects = new std::vector<VTTy
 bool VTWindow::Create() {
 	this->hInstance = GetModuleHandle(NULL);
 
-	this->m_Screen = new VTScreen();
-	this->m_Screen->ScreenWidth = 800;
-	this->m_Screen->ScreenHeight = 600;
-	this->m_Screen->ScreenX = 100;
-	this->m_Screen->ScreenY = 100;
+	if (!this->m_Screen) {
+		this->m_Screen = new VTScreen();
+		this->m_Screen->ScreenWidth = 800;
+		this->m_Screen->ScreenHeight = 600;
+		this->m_Screen->ScreenX = 100;
+		this->m_Screen->ScreenY = 100;
+	}
 
 	if (!this->RegisterWindowClass(this->hInstance, "VTWindowClass")) {
 		//Log
@@ -154,3 +160,5 @@ bool VTWindow::CreateWindowWithThread() {
 
 	return false;
 }
+
+std::atomic<bool> VTWindow::m_Initialized = { false };

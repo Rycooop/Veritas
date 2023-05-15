@@ -2,7 +2,7 @@
 
 
 VTText::VTText(float x, float y, float maxwidth, float maxheight, float size, const std::string& text, bool alignCenter, D3DCOLOR color) {
-	this->m_X = x;
+	this->m_X = x - (maxwidth / 2);
 	this->m_Y = y;
 	this->m_Width = maxwidth;
 	this->m_Height = maxheight;

@@ -2,7 +2,7 @@
 
 
 VTCircle::VTCircle(float x, float y, float radius, float res, D3DCOLOR color) {
-	this->m_X = x;
+	this->m_X = x - radius;
 	this->m_Y = y;
 	this->m_Radius = radius;
 	this->m_Res = res;

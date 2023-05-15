@@ -2,7 +2,7 @@
 
 
 VTRect::VTRect(float x, float y, float width, float height, D3DCOLOR color) {
-	this->m_X = x;
+	this->m_X = x - (width / 2);
 	this->m_Y = y;
 	this->m_Width = width;
 	this->m_Height = height;
