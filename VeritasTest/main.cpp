@@ -9,12 +9,15 @@
 #include <VTRoundedRect.h>
 #include <VTCheckbox.h>
 #include <VTRectHollow.h>
+#include <VTImage.h>
 #include <VTInputBox.h>
 #include <VTText.h>
 #include <VTMenu.h>
 #include <VTDivider.h>
 #include <VTLink.h>
 #include <vector>
+
+#include <testimage.h>
 
 
 void clicked() {
@@ -38,7 +41,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR nCmdLine,
 	}
 
 	// VTText add = VTText(300, 300, 40, "HIIII", D3DCOLOR_ARGB(255, 200, 200, 200));
-	// VTRect r1 = VTRect(10.0, 20.0, 40.0, 40.0, D3DCOLOR_ARGB(100, 233, 20, 40));
+	VTRect r1 = VTRect(300.0, 20.0, 40.0, 40.0, D3DCOLOR_ARGB(20, 233, 20, 40));
 	//VTRect r2 = VTRect(100.0, 100.0, 200.0, 100.0, D3DCOLOR_ARGB(255, 0, 255, 0));
 	//VTLine l1 = VTLine(10.0, 10.0, 100.0, 100.0, 20, D3DCOLOR_ARGB(20, 255, 0, 255));
 	//VTText t1 = VTText(150.0, 150.0, 30.0, "Test Text", D3DCOLOR_ARGB(255, 0, 0, 0));
@@ -63,8 +66,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR nCmdLine,
 	bool isChecked;
 	VTCheckbox check = VTCheckbox(150, 70, 20, 15, isChecked, CHECKBOX_STYLE::CHECKBOX_ROUNDED, D3DCOLOR_ARGB(255, 100, 100, 100), D3DCOLOR_ARGB(255, 90, 155, 203));
 
+	VTImage image = VTImage(160, 150, 200, 100, true, D3DCOLOR_ARGB(255, 100, 100, 100), "", r6PlayerIcon, sizeof(r6PlayerIcon));
+	VTImage i1 = VTImage(100, 100, 100, 200, true, D3DCOLOR_ARGB(255, 100, 100, 100), "", r6PlayerIcon, sizeof(r6PlayerIcon));
 
 	std::vector<VTObject*>* targs = new std::vector<VTObject*>();
+	targs->push_back(&r1);
 	//targs->push_back(&rr);
 	//targs->push_back(&rh);
 	targs->push_back(&title);
@@ -75,6 +81,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR nCmdLine,
 	targs->push_back(&link);
 	targs->push_back(&check);
 	targs->push_back(&rr);
+	targs->push_back(&image);
+	targs->push_back(&i1);
 
 	window.SetRenderTargets(targs);
 	

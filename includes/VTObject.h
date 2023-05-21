@@ -14,6 +14,7 @@ struct Vertex {
 	DWORD color;
 };
 
+
 class VTObject {
 public:
 	VTObject() = default;

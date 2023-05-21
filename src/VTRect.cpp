@@ -29,6 +29,8 @@ void VTRect::Init(LPDIRECT3DDEVICE9 _dev) {
 }
 
 void VTRect::Render() {
+	this->m_d3ddev->SetRenderState(D3DRS_ALPHABLENDENABLE, TRUE);
+
 	this->m_d3ddev->SetStreamSource(0, this->m_Buffer, 0, sizeof(Vertex));
 	this->m_d3ddev->DrawPrimitive(D3DPT_TRIANGLESTRIP, 0, 2);
 }
