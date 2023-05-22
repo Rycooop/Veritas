@@ -17,7 +17,7 @@
 #include <VTLink.h>
 #include <vector>
 
-#include <testimage.h>
+// #include <testimage.h>
 
 
 void clicked() {
@@ -47,18 +47,18 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR nCmdLine,
 	//VTText t1 = VTText(150.0, 150.0, 30.0, "Test Text", D3DCOLOR_ARGB(255, 0, 0, 0));
 	//VTText titleText = VTText(450, 120, 50, "Veritas", D3DCOLOR_ARGB(255, 255, 255, 255));
 	// VTCircle circ = VTCircle(150, 400, 50, 600, D3DCOLOR_ARGB(255, 255, 255, 0));
-	VTRoundedRect rr = VTRoundedRect(350, 350, 260, 160, 12, true, D3DCOLOR_ARGB(255, 255, 100, 100));
+	VTRoundedRect rr = VTRoundedRect(350, 350, 260, 160, 12, false, D3DCOLOR_ARGB(255, 255, 100, 100));
 	//VTRectHollow rh = VTRectHollow(100, 100, 200, 80, 9, D3DCOLOR_ARGB(255, 200, 100, 100));
 
-	VTText title = VTText(300, 100, 200, 1000, 60, "Recon", true, D3DCOLOR_ARGB(255, 240, 240, 240));
+	VTText title = VTText(300, 100, 200, 1000, 60, "Arial", "Recon", true, D3DCOLOR_ARGB(255, 240, 240, 240));
 	VTButton but = VTButton(350, 500, 100, 50, "Button", clicked, D3DCOLOR_ARGB(255, 255, 10, 20));
 
 	VTMenu menu = VTMenu("Hello", D3DCOLOR_ARGB(255, 255, 255, 255));
 
 	std::string username = "";
 	std::string password = "";
-	VTInputBox inputUsername = VTInputBox(300, 250, 250, 50, "Username", username, D3DCOLOR_ARGB(100, 90, 90, 90), D3DCOLOR_ARGB(255, 255, 255, 255));
-	VTInputBox inputPassword = VTInputBox(300, 350, 250, 50, "Password", password, D3DCOLOR_ARGB(100, 90, 90, 90), D3DCOLOR_ARGB(255, 255, 255, 255));
+	VTInputBox inputUsername = VTInputBox(300, 250, 200, 50, "Comic Sans", "Username", username, D3DCOLOR_ARGB(100, 90, 90, 90), D3DCOLOR_ARGB(255, 255, 255, 255));
+	VTInputBox inputPassword = VTInputBox(300, 350, 300, 30, "Arial", "Password", password, D3DCOLOR_ARGB(100, 90, 90, 90), D3DCOLOR_ARGB(255, 255, 255, 255));
 
 	// VTDivider div = VTDivider(100, 100, 400, 3, D3DCOLOR_ARGB(255, 100, 100, 100));
 	VTLink link = VTLink(20, 20, 100, 30, 20, "This is a link", "www.google.com", D3DCOLOR_ARGB(255, 100, 255, 100));
@@ -66,23 +66,23 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR nCmdLine,
 	bool isChecked;
 	VTCheckbox check = VTCheckbox(150, 70, 20, 15, isChecked, CHECKBOX_STYLE::CHECKBOX_ROUNDED, D3DCOLOR_ARGB(255, 100, 100, 100), D3DCOLOR_ARGB(255, 90, 155, 203));
 
-	VTImage image = VTImage(160, 150, 200, 100, true, D3DCOLOR_ARGB(255, 100, 100, 100), "", r6PlayerIcon, sizeof(r6PlayerIcon));
-	VTImage i1 = VTImage(100, 100, 100, 200, true, D3DCOLOR_ARGB(255, 100, 100, 100), "", r6PlayerIcon, sizeof(r6PlayerIcon));
+	//VTImage image = VTImage(160, 150, 200, 100, true, D3DCOLOR_ARGB(255, 100, 100, 100), "", r6PlayerIcon, sizeof(r6PlayerIcon));
+	//VTImage i1 = VTImage(100, 100, 100, 200, true, D3DCOLOR_ARGB(255, 100, 100, 100), "", r6PlayerIcon, sizeof(r6PlayerIcon));
 
 	std::vector<VTObject*>* targs = new std::vector<VTObject*>();
-	targs->push_back(&r1);
+	//targs->push_back(&r1);
 	//targs->push_back(&rr);
 	//targs->push_back(&rh);
 	targs->push_back(&title);
 	//targs->push_back(&but);
 	targs->push_back(&inputUsername);
-	targs->push_back(&inputPassword);
+	//targs->push_back(&inputPassword);
 	// targs->push_back(&div);
 	targs->push_back(&link);
 	targs->push_back(&check);
-	targs->push_back(&rr);
-	targs->push_back(&image);
-	targs->push_back(&i1);
+	//targs->push_back(&rr);
+	//targs->push_back(&image);
+	//targs->push_back(&i1);
 
 	window.SetRenderTargets(targs);
 	

@@ -11,7 +11,7 @@ VTLink::VTLink(float x, float y, float maxwidth, float maxheight, float textsize
 
 	this->m_Url = url;
 	this->text = text;
-	this->m_Text = new VTText(this->m_X + (maxwidth / 2), this->m_Y, this->m_Width, this->m_Height, textsize, this->text, true, color);
+	this->m_Text = new VTText(this->m_X + (maxwidth / 2), this->m_Y, this->m_Width, this->m_Height, textsize, "Arial", this->text, true, color);
 }
 
 void VTLink::Init(LPDIRECT3DDEVICE9 _dev) {

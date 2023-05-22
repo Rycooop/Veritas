@@ -1,12 +1,13 @@
 #include <VTText.h>
 
 
-VTText::VTText(float x, float y, float maxwidth, float maxheight, float size, const std::string& text, bool alignCenter, D3DCOLOR color) {
+VTText::VTText(float x, float y, float maxwidth, float maxheight, float size, const char* font, const std::string& text, bool alignCenter, D3DCOLOR color) {
 	this->m_X = x - (maxwidth / 2);
 	this->m_Y = y;
 	this->m_Width = maxwidth;
 	this->m_Height = maxheight;
 	this->m_Size = size;
+	this->m_FontFamily = font;
 	this->m_Text = text;
 	this->m_Center = alignCenter;
 	this->m_Color = color;
@@ -15,7 +16,7 @@ VTText::VTText(float x, float y, float maxwidth, float maxheight, float size, co
 }
 
 void VTText::Init(LPDIRECT3DDEVICE9 _dev) {
-	D3DXCreateFontA(_dev, (int)this->m_Size, 0, FW_NORMAL, -1, false, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, ANTIALIASED_QUALITY | PROOF_QUALITY, DEFAULT_PITCH | FF_DONTCARE, "Arial", &this->m_Font);
+	D3DXCreateFontA(_dev, (int)this->m_Size, 0, FW_NORMAL, -1, false, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, ANTIALIASED_QUALITY | PROOF_QUALITY, DEFAULT_PITCH | FF_DONTCARE, this->m_FontFamily.c_str(), &this->m_Font);
 }
 
 void VTText::Render() {

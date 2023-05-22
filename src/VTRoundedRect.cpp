@@ -43,10 +43,11 @@ void VTRoundedRect::Init(LPDIRECT3DDEVICE9 _dev) {
 	memcpy(pVoid, vertices2.data(), vertices2.size() * sizeof(Vertex));
 	this->m_OverlapBuffer->Unlock();
 
-	this->m_Edges[0] = new VTCircle(this->m_X + roundingEffect, this->m_Y + roundingEffect, roundingEffect, 90, this->m_Color) ;
-	this->m_Edges[1] = new VTCircle(this->m_X + roundingEffect, this->m_Y + this->m_Height - roundingEffect, roundingEffect, 90, this->m_Color);
-	this->m_Edges[2] = new VTCircle(this->m_X + this->m_Width + roundingEffect, this->m_Y + roundingEffect, roundingEffect, 90, this->m_Color);
-	this->m_Edges[3] = new VTCircle(this->m_X + this->m_Width + roundingEffect, this->m_Y + this->m_Height - roundingEffect, roundingEffect, 90, this->m_Color);
+	D3DCOLOR c = D3DCOLOR_ARGB(255, 255, 100, 100);
+	this->m_Edges[0] = new VTCircle(this->m_X + roundingEffect, this->m_Y + roundingEffect - 1, roundingEffect, 50, this->m_Color);
+	this->m_Edges[1] = new VTCircle(this->m_X + roundingEffect, this->m_Y + this->m_Height - roundingEffect, roundingEffect, 50, this->m_Color);
+	this->m_Edges[2] = new VTCircle(this->m_X + this->m_Width + roundingEffect, this->m_Y + roundingEffect - 1, roundingEffect, 50, this->m_Color);
+	this->m_Edges[3] = new VTCircle(this->m_X + this->m_Width + roundingEffect, this->m_Y + this->m_Height - roundingEffect, roundingEffect, 50, this->m_Color);
 
 	for (const auto& curr : this->m_Edges) {
 		curr->Init(_dev);

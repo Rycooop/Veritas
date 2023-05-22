@@ -18,7 +18,7 @@ void VTButton::Init(LPDIRECT3DDEVICE9 _dev) {
 	this->m_Obj = new VTRect(this->m_X + (this->m_Width / 2), this->m_Y, this->m_Width, this->m_Height, this->m_Color);
 	this->m_Obj->Init(_dev);
 
-	this->m_Text = new VTText(this->m_X + (this->m_Width / 2), this->m_Y + (this->m_Height / 3.f), this->m_Width, this->m_Height, this->m_Height / 2, this->m_ButtonText, true, D3DCOLOR_ARGB(255, 255, 255, 255));
+	this->m_Text = new VTText(this->m_X + (this->m_Width / 2), this->m_Y + (this->m_Height / 3.f), this->m_Width, this->m_Height, this->m_Height / 2, "Arial", this->m_ButtonText, true, D3DCOLOR_ARGB(255, 255, 255, 255));
 	this->m_Text->Init(_dev);
 
 	VTWindow::RegisterClickableObject(this);
