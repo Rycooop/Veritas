@@ -11,7 +11,7 @@
 
 class VTInputBox : public VTTypeableObject {
 public:
-	VTInputBox(float x, float y, float width, float height, const char* font, std::string placeholder, std::string& output, D3DCOLOR backgroundColor, D3DCOLOR textColor);
+	VTInputBox(float x, float y, float width, float height, float rounding, const char* font, std::string placeholder, std::string& output, D3DCOLOR backgroundColor, D3DCOLOR textColor);
 
 	void Init(LPDIRECT3DDEVICE9 _dev) override;
 	void Render() override;
@@ -27,6 +27,8 @@ private:
 	VTText* m_Text;
 	VTRect* m_Frame;
 	VTRoundedRect* m_FrameR;
+
+	float m_Rounding;
 };
 
 #endif //VERITAS_INPUTBOX_H

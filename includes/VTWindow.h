@@ -32,6 +32,9 @@ public:
 	static void NotifyClickableObjects(const POINT p);
 	static bool RegisterClickableObject(VTObject* object);
 
+	static void NotifyHoverableObjects(const POINT mouse);
+	static bool RegisterHoverableObject(VTObject* object);
+
 private:
 	static LRESULT MessageProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam);
 
@@ -40,6 +43,7 @@ private:
 
 	static std::vector<VTObject*>* ClickableObjects;
 	static std::vector<VTTypeableObject*>* TypeableObjects;
+	static std::vector<VTObject*>* HoverableObjects;
 
 	HWND m_Window;
 	HINSTANCE hInstance;

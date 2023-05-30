@@ -16,6 +16,8 @@ void VTCircle::Init(LPDIRECT3DDEVICE9 _dev) {
 
 	for (int i = 0; i < this->m_Res; i++) {
 		vertices[i].x = this->m_X + this->m_Radius * cos(D3DX_PI * (i / (this->m_Res / 2.0f)));
+		if (vertices[i].x <= this->m_X - this->m_Radius) vertices[i].x++;
+
 		vertices[i].y = this->m_Y + this->m_Radius * sin(D3DX_PI * (i / (this->m_Res / 2.0f)));
 		vertices[i].z = 0;
 		vertices[i].rhw = 1;

@@ -44,10 +44,17 @@ void VTRoundedRect::Init(LPDIRECT3DDEVICE9 _dev) {
 	this->m_OverlapBuffer->Unlock();
 
 	D3DCOLOR c = D3DCOLOR_ARGB(255, 255, 100, 100);
-	this->m_Edges[0] = new VTCircle(this->m_X + roundingEffect, this->m_Y + roundingEffect - 1, roundingEffect, 50, this->m_Color);
-	this->m_Edges[1] = new VTCircle(this->m_X + roundingEffect, this->m_Y + this->m_Height - roundingEffect, roundingEffect, 50, this->m_Color);
-	this->m_Edges[2] = new VTCircle(this->m_X + this->m_Width + roundingEffect, this->m_Y + roundingEffect - 1, roundingEffect, 50, this->m_Color);
-	this->m_Edges[3] = new VTCircle(this->m_X + this->m_Width + roundingEffect, this->m_Y + this->m_Height - roundingEffect, roundingEffect, 50, this->m_Color);
+	if (this->m_Width >= 300) {
+		this->m_Edges[0] = new VTCircle(this->m_X + roundingEffect - 1, this->m_Y + roundingEffect - 1, roundingEffect, 100, this->m_Color);
+		this->m_Edges[1] = new VTCircle(this->m_X + roundingEffect - 1, this->m_Y + this->m_Height - roundingEffect, roundingEffect, 100, this->m_Color);
+	}
+	else {
+		this->m_Edges[0] = new VTCircle(this->m_X + roundingEffect, this->m_Y + roundingEffect - 1, roundingEffect, 100, this->m_Color);
+		this->m_Edges[1] = new VTCircle(this->m_X + roundingEffect, this->m_Y + this->m_Height - roundingEffect, roundingEffect, 100, this->m_Color);
+	}
+	
+	this->m_Edges[2] = new VTCircle(this->m_X + this->m_Width + roundingEffect, this->m_Y + roundingEffect - 1, roundingEffect, 100, this->m_Color);
+	this->m_Edges[3] = new VTCircle(this->m_X + this->m_Width + roundingEffect, this->m_Y + this->m_Height - roundingEffect, roundingEffect, 100, this->m_Color);
 
 	for (const auto& curr : this->m_Edges) {
 		curr->Init(_dev);

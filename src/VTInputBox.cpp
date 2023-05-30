@@ -1,11 +1,12 @@
 #include <VTInputBox.h>
 
 
-VTInputBox::VTInputBox(float x, float y, float width, float height, const char* font, std::string placeholder, std::string& output, D3DCOLOR backgroundColor, D3DCOLOR textColor) {
+VTInputBox::VTInputBox(float x, float y, float width, float height, float rounding, const char* font, std::string placeholder, std::string& output, D3DCOLOR backgroundColor, D3DCOLOR textColor) {
 	this->m_X = x - (width / 2);
 	this->m_Y = y;
 	this->m_Width = width;
 	this->m_Height = height;
+	this->m_Rounding = rounding;
 	this->m_BackgroundColor = backgroundColor;
 	this->m_TextColor = textColor;
 	this->m_CaptureEnabled = false;
@@ -35,7 +36,7 @@ void VTInputBox::Init(LPDIRECT3DDEVICE9 _dev) {
 	//this->m_Frame = new VTRect(this->m_X + (this->m_Width / 2), this->m_Y, this->m_Width, this->m_Height, this->m_BackgroundColor);
 	//this->m_Frame->Init(_dev);
 
-	this->m_FrameR = new VTRoundedRect(this->m_X + (this->m_Width / 2), this->m_Y, this->m_Width, this->m_Height, 0, false, this->m_BackgroundColor);
+	this->m_FrameR = new VTRoundedRect(this->m_X + (this->m_Width / 2), this->m_Y, this->m_Width, this->m_Height, this->m_Rounding, false, this->m_BackgroundColor);
 	this->m_FrameR->Init(_dev);
 
 	VTWindow::RegisterClickableObject(this);

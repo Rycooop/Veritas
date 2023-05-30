@@ -13,6 +13,7 @@ VTWindow::VTWindow(VTScreen* screen) {
 
 std::vector<VTObject*>* VTWindow::ClickableObjects = new std::vector<VTObject*>();
 std::vector<VTTypeableObject*>* VTWindow::TypeableObjects = new std::vector<VTTypeableObject*>();
+std::vector<VTObject*>* VTWindow::HoverableObjects = new std::vector<VTObject*>();
 
 bool VTWindow::Create() {
 	this->hInstance = GetModuleHandle(NULL);
@@ -77,12 +78,24 @@ bool VTWindow::RegisterClickableObject(VTObject* object) {
 	else return false;
 }
 
+void VTWindow::NotifyHoverableObjects(const POINT p) {
+	for (auto& curr : *VTWindow::HoverableObjects) {
+		if ((p.x >= curr->m_X && p.x <= curr->m_X + curr->m_Width) && (p.y >= curr->m_Y && p.y <= curr->m_Y + curr->m_Height)) {
+		}
+	}
+}
+
+bool VTWindow::RegisterHoverableObject(VTObject* object) {
+	if (object->m_Width && object->m_Height) {
+		VTWindow::HoverableObjects->push_back(object);
+		return true;
+	}
+	else return false;
+}
+
 //---------------------------------------------------------------------------------------------------------------
 
 LRESULT VTWindow::MessageProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam) {
-	DWORD procID;
-	GetWindowThreadProcessId(hwnd, &procID);
-
 	switch (message) {
 		case WM_DESTROY: {
 			ExitProcess(0);
@@ -94,6 +107,11 @@ LRESULT VTWindow::MessageProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lPa
 			}
 
 			return DefWindowProc(hwnd, message, wParam, lParam);
+		}
+		case WM_MOUSEMOVE: {
+			if (VTWindow::HoverableObjects->empty()) return DefWindowProc(hwnd, message, wParam, lParam);
+
+
 		}
 		case WM_NCLBUTTONDOWN: {
 			static POINT MouseCoordinates = {};

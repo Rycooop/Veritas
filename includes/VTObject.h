@@ -34,4 +34,10 @@ protected:
 	LPDIRECT3DDEVICE9 m_d3ddev;
 };
 
+class HoverEffect {
+public:
+	D3DCOLOR color;
+	int ms;
+};
+
 #endif //VERITAS_OBJECT_H
