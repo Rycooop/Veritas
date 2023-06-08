@@ -29,6 +29,15 @@ void VTLink::Render() {
 	}
 }
 
+void VTLink::AddHoverEffect(VTHoverEffect* effect) {
+	bool registered = this->effect != NULL;
+	this->effect = effect;
+
+	if (!registered) {
+		VTWindow::RegisterHoverableObject(this);
+	}
+}
+
 void VTLink::OpenUrl(const std::string& url) {
 	ShellExecute(0, 0, url.c_str(), 0, 0, SW_SHOW);
 }

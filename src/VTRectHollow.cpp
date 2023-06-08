@@ -33,3 +33,12 @@ void VTRectHollow::Render() {
 		curr->Render();
 	}
 }
+
+void VTRectHollow::AddHoverEffect(VTHoverEffect* effect) {
+	bool registered = this->effect != NULL;
+	this->effect = effect;
+
+	if (!registered) {
+		VTWindow::RegisterHoverableObject(this);
+	}
+}

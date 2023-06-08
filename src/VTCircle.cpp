@@ -30,3 +30,12 @@ void VTCircle::Init(LPDIRECT3DDEVICE9 _dev) {
 void VTCircle::Render() {
 	this->m_d3ddev->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, this->m_Res - 1, this->m_Vertices.data(), sizeof(Vertex));
 }
+
+void VTCircle::AddHoverEffect(VTHoverEffect* effect) {
+	bool registered = this->effect != NULL;
+	this->effect = effect;
+
+	if (!registered) {
+		VTWindow::RegisterHoverableObject(this);
+	}
+}

@@ -14,3 +14,12 @@ void VTLine::Init(LPDIRECT3DDEVICE9 _dev) {
 void VTLine::Render() {
 	this->m_Line->Draw(this->m_LineVertex, 2, this->m_Color);
 }
+
+void VTLine::AddHoverEffect(VTHoverEffect* effect) {
+	bool registered = this->effect != NULL;
+	this->effect = effect;
+
+	if (!registered) {
+		VTWindow::RegisterHoverableObject(this);
+	}
+}

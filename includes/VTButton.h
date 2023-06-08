@@ -17,14 +17,12 @@ public:
 	void Init(LPDIRECT3DDEVICE9 _dev) override;
 	void Render() override;
 
-	void AddHoverEffect(const HoverEffect* effect) { this->m_HoverEffect = effect; }
-	void OnHover() const;
+	void AddHoverEffect(VTHoverEffect* effect);
 
 private:
 	VTRect* m_Obj;
 	VTRoundedRect* m_Frame;
 	VTText* m_Text;
-	const HoverEffect* m_HoverEffect;
 
 	void(*m_ClickHandler)();
 	std::string m_ButtonText;

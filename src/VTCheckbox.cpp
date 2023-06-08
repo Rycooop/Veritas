@@ -9,10 +9,12 @@ VTCheckbox::VTCheckbox(float x, float y, float w, float h, bool& checked, CHECKB
 	this->m_Style = style;
 	this->m_Color = background;
 	this->m_Checkedcolor = checkedcolor;
+
+	this->m_Innerbox = NULL;
 }
 
 void VTCheckbox::Init(LPDIRECT3DDEVICE9 _dev) {
-	const float RADIUS = this->m_Height / 3;
+	const float RADIUS = 5;
 
 	if (this->m_Style == CHECKBOX_STYLE::CHECKBOX_ROUNDED) {
 		this->m_Outerbox = new VTRoundedRect(this->m_X + (this->m_Width / 2), this->m_Y, this->m_Width, this->m_Height, RADIUS, false, this->m_Color);
@@ -30,8 +32,16 @@ void VTCheckbox::Init(LPDIRECT3DDEVICE9 _dev) {
 
 void VTCheckbox::Render() {
 	this->m_Outerbox->Render();
-	this->m_Innerbox->Render();
 
 	if (this->m_Clicked) {
+	}
+}
+
+void VTCheckbox::AddHoverEffect(VTHoverEffect* effect) {
+	bool registered = this->effect != NULL;
+	this->effect = effect;
+
+	if (!registered) {
+		VTWindow::RegisterHoverableObject(this);
 	}
 }

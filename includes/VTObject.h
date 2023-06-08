@@ -14,6 +14,18 @@ struct Vertex {
 	DWORD color;
 };
 
+struct VTHoverEffect {
+	VTHoverEffect() {
+		this->hovered = false;
+		this->color = D3DCOLOR_ARGB(255, 255, 255, 255);
+		this->x = 0;
+		this->y = 0;
+	}
+
+	bool hovered;
+	D3DCOLOR color;
+	float x, y;
+};
 
 class VTObject {
 public:
@@ -22,6 +34,8 @@ public:
 	virtual void Init(LPDIRECT3DDEVICE9 _dev) = 0;
 	virtual void Render() = 0;
 
+	virtual void AddHoverEffect(VTHoverEffect* effect) = 0;
+
 	float m_X;
 	float m_Y;
 	float m_Width;
@@ -29,15 +43,10 @@ public:
 	D3DCOLOR m_Color;
 
 	bool m_Clicked;
+	VTHoverEffect* effect;
 
 protected:
 	LPDIRECT3DDEVICE9 m_d3ddev;
-};
-
-class HoverEffect {
-public:
-	D3DCOLOR color;
-	int ms;
 };
 
 #endif //VERITAS_OBJECT_H

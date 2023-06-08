@@ -35,6 +35,11 @@ void VTButton::Render() {
 	}
 }
 
-void VTButton::OnHover() const {
+void VTButton::AddHoverEffect(VTHoverEffect* effect) {
+	bool registered = this->effect != NULL;
+	this->effect = effect;
 
+	if (!registered) {
+		VTWindow::RegisterHoverableObject(this);
+	}
 }

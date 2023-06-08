@@ -34,3 +34,12 @@ void VTRect::Render() {
 	this->m_d3ddev->SetStreamSource(0, this->m_Buffer, 0, sizeof(Vertex));
 	this->m_d3ddev->DrawPrimitive(D3DPT_TRIANGLESTRIP, 0, 2);
 }
+
+void VTRect::AddHoverEffect(VTHoverEffect* effect) {
+	bool registered = this->effect != NULL;
+	this->effect = effect;
+
+	if (!registered) {
+		VTWindow::RegisterHoverableObject(this);
+	}
+}

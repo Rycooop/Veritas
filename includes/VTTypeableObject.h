@@ -12,11 +12,4 @@ public:
 	std::shared_ptr<std::string> m_OutputBuffer;
 };
 
-class VTHoverableObject {
-public:
-	VTHoverableObject() = default;
-
-	virtual void OnHover() = 0;
-};
-
 #endif //VERITAS_TYPEABLEOBJECT_H

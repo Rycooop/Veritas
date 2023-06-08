@@ -51,9 +51,15 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR nCmdLine,
 	//VTText titleText = VTText(450, 120, 50, "Veritas", D3DCOLOR_ARGB(255, 255, 255, 255));
 	// VTCircle circ = VTCircle(150, 400, 50, 600, D3DCOLOR_ARGB(255, 255, 255, 0));
 	VTRoundedRect rr = VTRoundedRect(350, 350, 260, 160, 3, false, D3DCOLOR_ARGB(255, 255, 100, 100));
+	VTHoverEffect* re = new VTHoverEffect();
+	re->color = D3DCOLOR_ARGB(255, 100, 255, 230);
+	re->x = 1; 
+	re->y = 2;
+	rr.AddHoverEffect(re);
+
 	//VTRectHollow rh = VTRectHollow(100, 100, 200, 80, 9, D3DCOLOR_ARGB(255, 200, 100, 100));
 
-	VTText title = VTText(300, 100, 200, 1000, 60, "Arial", "Recon", true, D3DCOLOR_ARGB(255, 240, 240, 240));
+	VTText title = VTText(300, 100, 200, 1000, 60, "Arial", "Veritas", true, D3DCOLOR_ARGB(255, 240, 240, 240));
 	VTButton but = VTButton(350, 500, 400, 50, 5, "Button", clicked, D3DCOLOR_ARGB(255, 255, 10, 20));
 
 	VTMenu menu = VTMenu("Hello", D3DCOLOR_ARGB(255, 255, 255, 255));
@@ -68,7 +74,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR nCmdLine,
 	VTLink link = VTLink(20, 20, 100, 30, 20, "This is a link", "www.google.com", D3DCOLOR_ARGB(255, 100, 255, 100));
 
 	bool isChecked;
-	VTCheckbox check = VTCheckbox(150, 70, 20, 20, isChecked, CHECKBOX_STYLE::CHECKBOX_ROUNDED, D3DCOLOR_ARGB(255, 230, 230, 230), D3DCOLOR_ARGB(255, 90, 155, 203));
+	VTCheckbox check = VTCheckbox(150, 70, 40, 40, isChecked, CHECKBOX_STYLE::CHECKBOX_ROUNDED, D3DCOLOR_ARGB(255, 230, 230, 230), D3DCOLOR_ARGB(255, 90, 155, 203));
 
 	//VTImage image = VTImage(160, 150, 200, 100, true, D3DCOLOR_ARGB(255, 100, 100, 100), "", r6PlayerIcon, sizeof(r6PlayerIcon));
 	//VTImage i1 = VTImage(100, 100, 100, 200, true, D3DCOLOR_ARGB(255, 100, 100, 100), "", r6PlayerIcon, sizeof(r6PlayerIcon));

@@ -2,7 +2,9 @@
 #define VERITAS_TEXT_H
 
 #include <VTObject.h>
+#include <VTWindow.h>
 #include <string>
+
 
 class VTText : public VTObject {
 public:
@@ -10,6 +12,8 @@ public:
 
 	void Init(LPDIRECT3DDEVICE9 _dev) override;
 	void Render() override;
+
+	void AddHoverEffect(VTHoverEffect* effect);
 
 	void UpdateText(std::string text) { this->m_Text = text; }
 

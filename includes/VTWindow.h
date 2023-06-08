@@ -29,10 +29,10 @@ public:
 	static void RegisterTypeableObject(VTTypeableObject* object);
 	static void RegisterKeystroke(char c);
 
-	static void NotifyClickableObjects(const POINT p);
+	static void NotifyClickableObjects(const POINT& p);
 	static bool RegisterClickableObject(VTObject* object);
 
-	static void NotifyHoverableObjects(const POINT mouse);
+	static void NotifyHoverableObjects(const POINT& mouse);
 	static bool RegisterHoverableObject(VTObject* object);
 
 private:

@@ -9,6 +9,8 @@ VTRoundedRect::VTRoundedRect(float x, float y, float w, float h, float rounding,
 	this->m_Rounding = rounding;
 	this->m_HasShadow = hasShadow;
 	this->m_Color = color;
+
+	this->effect = NULL;
 }
 
 void VTRoundedRect::Init(LPDIRECT3DDEVICE9 _dev) {
@@ -18,17 +20,17 @@ void VTRoundedRect::Init(LPDIRECT3DDEVICE9 _dev) {
 	float roundingEffect = (this->m_Width / 100.f) + this->m_Rounding;
 
 	vertices = {
-		{this->m_X, this->m_Y + this->m_Height, 0.5, 1.0, this->m_Color},
-		{this->m_X, this->m_Y, 0.5, 1.0, this->m_Color},
-		{this->m_X + this->m_Width, this->m_Y + this->m_Height, 0.5, 1.0, this->m_Color},
-		{this->m_X + this->m_Width, this->m_Y, 0.5, 1.0, this->m_Color},
+		{this->m_X, this->m_Y + this->m_Height - roundingEffect, 0.5, 1.0, this->m_Color},
+		{this->m_X, this->m_Y + roundingEffect, 0.5, 1.0, this->m_Color},
+		{this->m_X + this->m_Width, this->m_Y + this->m_Height - roundingEffect, 0.5, 1.0, this->m_Color},
+		{this->m_X + this->m_Width, this->m_Y + roundingEffect, 0.5, 1.0, this->m_Color},
 	};
 
 	vertices2 = {
-		{this->m_X - roundingEffect, this->m_Y + this->m_Height - roundingEffect, 0.5, 1.0, this->m_Color},
-		{this->m_X - roundingEffect, this->m_Y + roundingEffect, 0.5, 1.0, this->m_Color},
-		{this->m_X + this->m_Width + roundingEffect, this->m_Y + this->m_Height - roundingEffect, 0.5, 1.0, this->m_Color},
-		{this->m_X + this->m_Width + roundingEffect, this->m_Y + roundingEffect, 0.5, 1.0, this->m_Color},
+		{this->m_X + roundingEffect, this->m_Y + this->m_Height, 0.5, 1.0, this->m_Color},
+		{this->m_X + roundingEffect, this->m_Y, 0.5, 1.0, this->m_Color},
+		{this->m_X + this->m_Width - roundingEffect, this->m_Y + this->m_Height, 0.5, 1.0, this->m_Color},
+		{this->m_X + this->m_Width - roundingEffect, this->m_Y, 0.5, 1.0, this->m_Color},
 	};
 
 	_dev->CreateVertexBuffer(vertices.size() * sizeof(Vertex), 0, CUSTOM_FVF, D3DPOOL_MANAGED, &this->m_Buffer, NULL);
@@ -45,16 +47,16 @@ void VTRoundedRect::Init(LPDIRECT3DDEVICE9 _dev) {
 
 	D3DCOLOR c = D3DCOLOR_ARGB(255, 255, 100, 100);
 	if (this->m_Width >= 300) {
-		this->m_Edges[0] = new VTCircle(this->m_X + roundingEffect - 1, this->m_Y + roundingEffect - 1, roundingEffect, 100, this->m_Color);
+		this->m_Edges[0] = new VTCircle(this->m_X + (roundingEffect * 2), this->m_Y + roundingEffect - 1, roundingEffect, 100, this->m_Color);
 		this->m_Edges[1] = new VTCircle(this->m_X + roundingEffect - 1, this->m_Y + this->m_Height - roundingEffect, roundingEffect, 100, this->m_Color);
 	}
 	else {
-		this->m_Edges[0] = new VTCircle(this->m_X + roundingEffect, this->m_Y + roundingEffect - 1, roundingEffect, 100, this->m_Color);
-		this->m_Edges[1] = new VTCircle(this->m_X + roundingEffect, this->m_Y + this->m_Height - roundingEffect, roundingEffect, 100, this->m_Color);
+		this->m_Edges[0] = new VTCircle(this->m_X + (roundingEffect * 2) - 1, this->m_Y + roundingEffect - 1, roundingEffect, 100, this->m_Color);
+		this->m_Edges[1] = new VTCircle(this->m_X + (roundingEffect * 2) - 1, this->m_Y + this->m_Height - roundingEffect, roundingEffect, 100, this->m_Color);
 	}
 	
-	this->m_Edges[2] = new VTCircle(this->m_X + this->m_Width + roundingEffect, this->m_Y + roundingEffect - 1, roundingEffect, 100, this->m_Color);
-	this->m_Edges[3] = new VTCircle(this->m_X + this->m_Width + roundingEffect, this->m_Y + this->m_Height - roundingEffect, roundingEffect, 100, this->m_Color);
+	this->m_Edges[2] = new VTCircle(this->m_X + this->m_Width, this->m_Y + roundingEffect - 1, roundingEffect, 100, this->m_Color);
+	this->m_Edges[3] = new VTCircle(this->m_X + this->m_Width, this->m_Y + this->m_Height - roundingEffect, roundingEffect, 100, this->m_Color);
 
 	for (const auto& curr : this->m_Edges) {
 		curr->Init(_dev);
@@ -76,6 +78,7 @@ void VTRoundedRect::Init(LPDIRECT3DDEVICE9 _dev) {
 }
 
 void VTRoundedRect::Render() {
+
 	//Render Shadow before object so it is underneath
 	if (this->m_HasShadow) {
 		this->m_Shadow->Render();
@@ -88,5 +91,14 @@ void VTRoundedRect::Render() {
 
 	for (const auto& curr : this->m_Edges) {
 		curr->Render();
+	}
+}
+
+void VTRoundedRect::AddHoverEffect(VTHoverEffect* effect) {
+	bool registered = this->effect != NULL;
+	this->effect = effect;
+
+	if (!registered) {
+		VTWindow::RegisterHoverableObject(this);
 	}
 }

@@ -20,8 +20,18 @@ void VTDivider::Init(LPDIRECT3DDEVICE9 _dev) {
 	this->m_Edges[0]->Init(_dev);
 	this->m_Edges[1]->Init(_dev);
 }
+
 void VTDivider::Render() {
 	this->m_DividerRect->Render();
 	this->m_Edges[0]->Render();
 	this->m_Edges[1]->Render();
+}
+
+void VTDivider::AddHoverEffect(VTHoverEffect* effect) {
+	bool registered = this->effect != NULL;
+	this->effect = effect;
+
+	if (!registered) {
+		VTWindow::RegisterHoverableObject(this);
+	}
 }

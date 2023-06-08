@@ -13,6 +13,8 @@ public:
 	void Init(LPDIRECT3DDEVICE9 _dev) override;
 	void Render() override;
 
+	void AddHoverEffect(VTHoverEffect* effect);
+
 private:
 	VTRect* m_DividerRect;
 	VTCircle* m_Edges[2];

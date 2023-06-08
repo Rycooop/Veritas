@@ -3,6 +3,7 @@
 
 #include <string>
 #include <VTObject.h>
+#include <VTWindow.h>
 
 
 class VTImage : public VTObject {
@@ -11,6 +12,8 @@ public:
 
 	void Init(LPDIRECT3DDEVICE9 _dev) override;
 	void Render() override;
+
+	void AddHoverEffect(VTHoverEffect* effect);
 
 private:
 	LPDIRECT3DTEXTURE9 m_ImageTex;

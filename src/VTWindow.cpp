@@ -61,7 +61,7 @@ void VTWindow::RegisterKeystroke(char c) {
 	}
 }
 
-void VTWindow::NotifyClickableObjects(const POINT p) {
+void VTWindow::NotifyClickableObjects(const POINT& p) {
 	for (auto& curr : *VTWindow::ClickableObjects) {
 		if ((p.x >= curr->m_X && p.x <= curr->m_X + curr->m_Width) && (p.y >= curr->m_Y && p.y <= curr->m_Y + curr->m_Height)) {
 			curr->m_Clicked = true;
@@ -78,15 +78,18 @@ bool VTWindow::RegisterClickableObject(VTObject* object) {
 	else return false;
 }
 
-void VTWindow::NotifyHoverableObjects(const POINT p) {
+void VTWindow::NotifyHoverableObjects(const POINT& p) {
 	for (auto& curr : *VTWindow::HoverableObjects) {
 		if ((p.x >= curr->m_X && p.x <= curr->m_X + curr->m_Width) && (p.y >= curr->m_Y && p.y <= curr->m_Y + curr->m_Height)) {
+			std::cout << "Hovered" << std::endl;
+			curr->effect->hovered = true;
 		}
+		else curr->effect->hovered = false;
 	}
 }
 
 bool VTWindow::RegisterHoverableObject(VTObject* object) {
-	if (object->m_Width && object->m_Height) {
+	if (object->m_Width || object->m_Height) {
 		VTWindow::HoverableObjects->push_back(object);
 		return true;
 	}
@@ -97,9 +100,14 @@ bool VTWindow::RegisterHoverableObject(VTObject* object) {
 
 LRESULT VTWindow::MessageProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam) {
 	switch (message) {
-		case WM_DESTROY: {
-			ExitProcess(0);
-			return 0;
+		case WM_MOUSEMOVE: {
+			std::cout << "Move" << std::endl;
+			static POINT MouseCoordinates = {};
+			MouseCoordinates.x = GET_X_LPARAM(lParam);
+			MouseCoordinates.y = GET_Y_LPARAM(lParam);
+			VTWindow::NotifyHoverableObjects(MouseCoordinates);
+
+			return DefWindowProc(hwnd, message, wParam, lParam);
 		}
 		case WM_KEYDOWN: {
 			if (char c = MapVirtualKey(wParam, MAPVK_VK_TO_CHAR)) {
@@ -107,12 +115,7 @@ LRESULT VTWindow::MessageProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lPa
 			}
 
 			return DefWindowProc(hwnd, message, wParam, lParam);
-		}
-		case WM_MOUSEMOVE: {
-			if (VTWindow::HoverableObjects->empty()) return DefWindowProc(hwnd, message, wParam, lParam);
-
-
-		}
+		}  
 		case WM_NCLBUTTONDOWN: {
 			static POINT MouseCoordinates = {};
 			MouseCoordinates.x = GET_X_LPARAM(lParam);
@@ -128,6 +131,10 @@ LRESULT VTWindow::MessageProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lPa
 				hit = HTCAPTION;
 			}
 			return hit;
+		}
+		case WM_DESTROY: {
+			ExitProcess(0);
+			return 0;
 		}
 
 		default:

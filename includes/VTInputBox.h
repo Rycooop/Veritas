@@ -16,6 +16,8 @@ public:
 	void Init(LPDIRECT3DDEVICE9 _dev) override;
 	void Render() override;
 
+	void AddHoverEffect(VTHoverEffect* effect);
+
 private:
 	D3DCOLOR m_TextColor;
 	D3DCOLOR m_BackgroundColor;

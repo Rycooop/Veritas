@@ -55,3 +55,12 @@ void VTInputBox::Render() {
 	}
 	else this->m_Placeholder->Render();
 }
+
+void VTInputBox::AddHoverEffect(VTHoverEffect* effect) {
+	bool registered = this->effect != NULL;
+	this->effect = effect;
+
+	if (!registered) {
+		VTWindow::RegisterHoverableObject(this);
+	}
+}

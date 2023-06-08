@@ -14,6 +14,8 @@ public:
 	void Init(LPDIRECT3DDEVICE9 _dev) override;
 	void Render() override;
 
+	void AddHoverEffect(VTHoverEffect* effect);
+
 private:
 	VTText* m_Text;
 	std::string text;

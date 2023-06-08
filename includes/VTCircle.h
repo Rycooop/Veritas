@@ -2,6 +2,7 @@
 #define VERITAS_CIRCLE_H
 
 #include <VTObject.h>
+#include <VTWindow.h>
 
 
 class VTCircle : public VTObject {
@@ -10,6 +11,8 @@ public:
 
 	void Init(LPDIRECT3DDEVICE9 _dev) override;
 	void Render() override;
+
+	void AddHoverEffect(VTHoverEffect* effect);
 
 private:
 	std::vector<Vertex> m_Vertices;

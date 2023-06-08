@@ -25,3 +25,12 @@ void VTText::Render() {
 	}
 	else this->m_Font->DrawTextA(NULL, this->m_Text.c_str(), -1, &this->m_FontRect, DT_LEFT, this->m_Color);
 }
+
+void VTText::AddHoverEffect(VTHoverEffect* effect) {
+	bool registered = this->effect != NULL;
+	this->effect = effect;
+
+	if (!registered) {
+		VTWindow::RegisterHoverableObject(this);
+	}
+}

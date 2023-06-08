@@ -12,6 +12,8 @@ public:
 	void Init(LPDIRECT3DDEVICE9 _dev) override;
 	void Render() override;
 
+	void AddHoverEffect(VTHoverEffect* effect);
+
 private:
 	LPDIRECT3DVERTEXBUFFER9 m_Buffer;
 

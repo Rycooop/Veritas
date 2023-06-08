@@ -32,3 +32,12 @@ void VTImage::Render() {
 	this->m_Sprite->Draw(this->m_ImageTex, NULL, NULL, &this->m_Pos, this->m_Color);
 	this->m_Sprite->End();
 }
+
+void VTImage::AddHoverEffect(VTHoverEffect* effect) {
+	bool registered = this->effect != NULL;
+	this->effect = effect;
+
+	if (!registered) {
+		VTWindow::RegisterHoverableObject(this);
+	}
+}
